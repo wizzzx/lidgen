@@ -1,3 +1,25 @@
 .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(51.01deg, #88AFF4 -4.29%, #628DD9 80.67%);
 
 }
+
+.title_text {
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 80.45px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.sub_container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 181.1px;
+}
+
+
