@@ -1,0 +1,55 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url("https://s3-alpha-sig.figma.com/img/43a1/8549/5ed12b80fafbc1f07f0d64a06067242e?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=oxnyoH9VzG9EtkH8jClKxMkqXiYsjEIu88R1~sO2-pJ~ID-ow0OfBykftsc2xJ9M-0jW9fwtfx9A59oTOtc~aZLOQgmOgGPwmeuir5yYOZV3MjZiX27-m24aJPhTZZbe0fliR5HVPtwpxPxw1iE7K9K7s~wMJrGjwQVLMidygp4p0LZ25ZI-Tsd-BPr9qGujIihJsMAaywrWpuyLtOu~BHmH5ZDk56WWy8PUKGPEUNzsdaOdKBqDZwFGkZ5WnQfqBkmr6st7bWT2YrRNGAn7j~xPs--R~86SMZmWcU24lZ3AM-vym~JE7vQ6nikgDq1JqU88g1VU~3SHhfpsES5Otg__");
+  background-size: cover;
+  background-position: center;
+}
+
+.slider_block_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 425px;
+  margin-right: 425px;
+  margin-top: 56px;
+}
+
+.title_main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 104.79px;
+  font-size: 120px;
+}
+
+.text_block {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 57.28px;
+  text-align: left;
+
+}
+
+.text {
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 38.19px;
+  text-align: left;
+  color: #252D24;
+}
+
+.highlighted_word {
+  color: #4065F6;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  text-underline-offset: 14px;
+}

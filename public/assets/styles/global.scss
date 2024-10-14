@@ -1,0 +1,12 @@
+@import "reset";
+@import "animation";
+@import "colors";
+@import "variables";
+@import "grid";
+@import "mixins";
+@import "media";
+
+:root {
+  --max-width: 100%;
+  --min-width: 100%;
+}
