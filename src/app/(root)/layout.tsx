@@ -3,6 +3,7 @@ import {SliderBlock} from "@/components/shared/SliderBlock";
 import {SITE_NAME} from "@/constants/seo.constants";
 import ContainerLayout from "../../components/shared/ContainerLayout";
 import {InstructionsBlock} from "@/components/shared/InstructionsBlock";
+import {TermsBlock} from "@/components/shared/TermsBlock";
 
 export const metadata: Metadata = {
     title: {
@@ -18,6 +19,7 @@ export default function RootLayout({children}: Readonly<{children: React.ReactNo
         <ContainerLayout>
             <SliderBlock/>
             <InstructionsBlock/>
+            <TermsBlock/>
         </ContainerLayout>
       </>
     );

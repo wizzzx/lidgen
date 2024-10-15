@@ -1,15 +1,10 @@
 'use client'
 
 import React from "react";
-import cn from "classnames";
 import styles from "./index.module.scss";
 import { Container } from "@/components/shared/Container";
 import { Header } from "@/components/ui/Header";
 import { BlockTitle } from "@/components/ui/BlockTitle";
-
-interface Props {
-  className?: string;
-}
 
 const textData = [
   {
@@ -18,7 +13,7 @@ const textData = [
   }
 ];
 
-export const SliderBlock: React.FC<Props> = ({ className }) => {
+export const SliderBlock: React.FC = () => {
   return (
     <Container className={styles.container}>
       <Header />

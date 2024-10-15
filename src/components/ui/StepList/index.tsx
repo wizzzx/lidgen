@@ -12,7 +12,7 @@ interface Props {
     texts?: string[]
 }
 
-const StepNumbers = [
+const StepData = [
     {
         src: '/assets/icons/ui/1st_step.svg',
         alt: '1st step icon',
@@ -36,7 +36,7 @@ const StepNumbers = [
 export const StepList: React.FC<Props> = ({className, texts = [] }) => {
     return (
         <Container className={cn(styles.container, className)}>
-            {StepNumbers.map((item, index) => (
+            {StepData.map((item, index) => (
                 <div key={index} className={styles.step_container}>
                     <Image src={item.src} alt={item.alt} width={item.width} height={item.height} />
                     {texts[index] && <p className={styles.step_text}>{texts[index]}</p>}
