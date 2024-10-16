@@ -1,0 +1,59 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding-left: 156px;
+  padding-top: 99px;
+
+}
+
+.rating_container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding-bottom: 34px;
+  border-bottom: 1px solid #D2D2D2;
+  padding-top: 48px;
+  margin-right: 152px;
+  width: 1609px;
+}
+
+.naming_container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.subtitle {
+  font-size: 24px;
+  font-weight: 400;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+}
+
+.button_container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 36px;
+}
+
+.rating_button {
+   width: 439px;
+   height: 78px;
+  background-color: #0066FF;
+  border-radius: 12px;
+  font-family: var(--font-cera);
+  font-weight: 400;
+  font-size: 32px;
+  color: #FFFFFF;
+  padding: 15px 28px 15px 33px;
+  gap: 17px;
+
+}
+
