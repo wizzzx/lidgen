@@ -2,18 +2,19 @@
 
 import React from "react";
 import styles from './index.module.scss'
+import cn from "classnames";
 
 interface Props {
     className?: string
     label: string
-    icon?: React.ReactNode
+    children?: React.ReactNode
 }
 
-export const Button: React.FC<Props> = ({className, label, icon}) => {
+export const Button: React.FC<Props> = ({className, label, children}) => {
     return (
-        <button className={className}>
-            <span>{label}</span>
-            {icon && <span className={styles.icon}>{icon}</span>}
+        <button className={cn(styles.button, className)}>
+            {label}
+            {children}
         </button>
     )
 }

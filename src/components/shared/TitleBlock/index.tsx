@@ -13,7 +13,7 @@ const textData = [
   }
 ];
 
-export const SliderBlock: React.FC = () => {
+export const TitleBlock: React.FC = () => {
   return (
     <Container className={styles.container}>
       <Header />

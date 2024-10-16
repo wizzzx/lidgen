@@ -1,9 +1,10 @@
 import {Metadata} from "next";
-import {SliderBlock} from "@/components/shared/SliderBlock";
+import {TitleBlock} from "../../components/shared/TitleBlock";
 import {SITE_NAME} from "@/constants/seo.constants";
 import ContainerLayout from "../../components/shared/ContainerLayout";
 import {InstructionsBlock} from "@/components/shared/InstructionsBlock";
 import {TermsBlock} from "@/components/shared/TermsBlock";
+import {RecommendationBlock} from "@/components/shared/RecommendationBlock";
 
 export const metadata: Metadata = {
     title: {
@@ -17,9 +18,10 @@ export default function RootLayout({children}: Readonly<{children: React.ReactNo
     return (
       <>
         <ContainerLayout>
-            <SliderBlock/>
+            <TitleBlock/>
             <InstructionsBlock/>
             <TermsBlock/>
+            <RecommendationBlock/>
         </ContainerLayout>
       </>
     );

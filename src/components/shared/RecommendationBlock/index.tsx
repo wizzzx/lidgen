@@ -4,65 +4,44 @@ import React from "react";
 import styles from "./index.module.scss";
 import cn from "classnames";
 import { Container } from "@/components/shared/Container";
-import {Button} from "@/components/ui/Button";
+import { Button } from "@/components/ui/Button";
+import Image from "next/image";
+import {RatingBlock} from "@/components/shared/RatingBlock";
 
 const RecommendationData = [
   {
     text: "Крупные официальные компании из реестра ЦБ",
-    icon: "/assets/icons/ui/bank.svg",
+    routeSrc: "/assets/icons/ui/bank.svg",
+    alt: "bank",
   },
   {
     text: "Высокий рейтинг на сайтах otzovik.ru и banki.ru",
-    icon: "/assets/icons/ui/stars.svg",
+    routeSrc: "/assets/icons/ui/stars.svg",
+    alt: "stars",
   },
   {
     text: "Отлаженные процессы и быстрое время одобрения",
-    icon: "/assets/icons/ui/timer.svg",
+    routeSrc: "/assets/icons/ui/timer.svg",
+    alt: "timer",
   },
   {
     text: "Высокий процент одобрения",
-    icon: "/assets/icons/ui/thumbs.svg",
+    routeSrc: "/assets/icons/ui/thumbs.svg",
+    alt: "thumbs up",
   },
 ];
 
 const TermsData = [
-    {
-        title: 'Сумма',
-        text: 'до 30 000 &#x20BD'
-    },
-    {
-        title: 'Срок',
-        text: 'до 30 дней'
-    }
-]
+  {
+    title: "Сумма",
+    text: "до 30 000 Р",
+  },
+  {
+    title: "Срок",
+    text: "до 30 дней",
+  },
+];
 
-const RatingData = [
-    {
-        title: 'Деньги сразу',
-        subtitle: 'ООО МКК "Скороденьги"',
-        platform: 'Banki.ru 5.0   Otzovik 5.0'
-    },
-    {
-        title: 'Деньги сразу',
-        subtitle: 'ООО МКК "Миг Финанс"',
-        platform: 'Banki.ru 5.0   Otzovik 5.0'
-    },
-    {
-        title: 'Деньги сразу',
-        subtitle: 'ООО МКК "КешБек Налом"',
-        platform: 'Banki.ru 5.0   Otzovik 5.0'
-    },
-    {
-        title: 'Деньги сразу',
-        subtitle: 'ООО МКК "Денюжки под ПТС"',
-        platform: 'Banki.ru 5.0   Otzovik 5.0'
-    },
-    {
-        title: 'Деньги сразу',
-        subtitle: 'ООО МКК "Первая финансовая организация"',
-        platform: 'Banki.ru 5.0   Otzovik 5.0'
-    },
-]
 
 export const RecommendationBlock: React.FC = () => {
   return (
@@ -70,12 +49,23 @@ export const RecommendationBlock: React.FC = () => {
       <h3 className={styles.section_header}>
         Займы онлайн нашим клиентам выдают
       </h3>
-      <div>
+      <div className={styles.recommendations_container}>
         {RecommendationData.map((item, index) => (
-          <div key={index} className={styles.recommendation_container}>
-            <div className={styles.recommendation_icon}>{item.icon}</div>
-            <div className={styles.recommendation_text}>{item.text}</div>
-          </div>
+          <React.Fragment key={index}>
+            <div className={styles.recommendation_container}>
+              <div className={styles.recommendation_icon}>
+                <Image
+                  src={item.routeSrc}
+                  alt={item.alt}
+                  width={60}
+                  height={60}
+                />
+              </div>
+              <div>
+                <div className={styles.recommendation_text}>{item.text}</div>
+              </div>
+            </div>
+          </React.Fragment>
         ))}
       </div>
       <div className={styles.terms_container}>
@@ -86,20 +76,9 @@ export const RecommendationBlock: React.FC = () => {
           </div>
         ))}
       </div>
-      <div className={styles.rating_container}>
-        {RatingData.map((item, index) => (
-          <div key={index}>
-            <div>
-              <div>{item.title}</div>
-              <div>{item.subtitle}</div>
-            </div>
-            <div>
-              <div>{item.platform}</div>
-              <Button label={"Получить за 5 минут"} icon={'./assets/icons/clock.svg'}/>
-            </div>
-          </div>
-        ))}
-      </div>
+      <RatingBlock />
+      <Button label={'Получить займ за 5 минут'} className={styles.big_button}/>
+
     </Container>
   );
 };
