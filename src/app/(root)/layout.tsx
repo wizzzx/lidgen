@@ -5,6 +5,7 @@ import ContainerLayout from "../../components/shared/ContainerLayout";
 import {InstructionsBlock} from "@/components/shared/InstructionsBlock";
 import {TermsBlock} from "@/components/shared/TermsBlock";
 import {RecommendationBlock} from "@/components/shared/RecommendationBlock";
+import {GuaranteeBlock} from "@/components/shared/GuaranteeBlock";
 
 export const metadata: Metadata = {
     title: {
@@ -22,6 +23,7 @@ export default function RootLayout({children}: Readonly<{children: React.ReactNo
             <InstructionsBlock/>
             <TermsBlock/>
             <RecommendationBlock/>
+            <GuaranteeBlock/>
         </ContainerLayout>
       </>
     );
