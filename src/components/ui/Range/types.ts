@@ -17,3 +17,4 @@ export type RangeType = {
     setValues: React.Dispatch<React.SetStateAction<any[]>>
     onChange?: () => void
 } & AllHTMLAttributes<HTMLDivElement>
+
