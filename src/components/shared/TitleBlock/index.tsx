@@ -5,6 +5,12 @@ import styles from "./index.module.scss";
 import { Container } from "@/components/shared/Container";
 import { Header } from "@/components/ui/Header";
 import { BlockTitle } from "@/components/ui/BlockTitle";
+import {RangeWithTitleVariant} from "@/components/widgets/RangeWithTitleVariant";
+
+interface Props {
+    className?: string;
+    amount: number;
+}
 
 const textData = [
   {
@@ -13,7 +19,7 @@ const textData = [
   }
 ];
 
-export const TitleBlock: React.FC = () => {
+export const TitleBlock: React.FC<Props> = ({amount}) => {
   return (
     <Container className={styles.container}>
       <Header />
@@ -27,6 +33,7 @@ export const TitleBlock: React.FC = () => {
               </>
           }
         />
+          {/*<RangeWithTitleVariant amount={amount} variant={'amount'} title={''} step={10000} min={50000} max={1000000} name={'loan_data.amount'} />*/}
         <div>
             {textData.map((item, index) => (
                 <div key={index} className={styles.text_block}>

@@ -3,19 +3,29 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "npm run open-browser && env-cmd -f .env.stage next dev",
+    "open-browser": "start http://localhost:3000",
     "build": "next build",
+    "build:prod": "env-cmd -f .env.prod next build",
+    "build:stage": "env-cmd -f .env.stage next build",
     "start": "next start",
+    "start:prod": "env-cmd -f .env.prod next start",
+    "start:stage": "env-cmd -f .env.stage next start",
     "lint": "next lint",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "prettier": "npx prettier --write **/*.{ts,tsx,json}",
+    "storybook": "storybook dev -p 6006 -c .storybook -s public",
+    "build-storybook": "storybook build -c .storybook -s public",
+    "prepare": "husky"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.8",
     "@tanstack/react-query": "^4.36.1",
     "@tanstack/react-query-devtools": "^4.36.1",
+    "axios": "^1.7.7",
     "classnames": "^2.5.1",
+    "env-cmd": "^10.1.0",
     "framer-motion": "^11.11.7",
+    "lodash": "^4.17.21",
     "next": "14.2.15",
     "prettier": "^3.3.3",
     "react": "^18",
@@ -43,6 +53,7 @@
     "eslint": "^8",
     "eslint-config-next": "14.2.15",
     "eslint-plugin-storybook": "^0.9.0",
+    "husky": "^9.1.6",
     "storybook": "^8.3.5",
     "typescript": "^5"
   }
