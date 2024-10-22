@@ -1,57 +1,51 @@
-//.container {
-//  max-width: 650px;
-//  width: 100%;
-//  position: absolute;
-//  top: 50%;
-//  left: 50%;
-//  transform: translate(-50%, -50%);
-//}
-//
-//.wrapper {
-//  border-bottom: 1px solid black;
-//  overflow: hidden;
-//}
-//
-//.wrapper .question-container {
-//  width: 100%;
-//  text-align: left;
-//  padding: 20px 10px;
-//  display: flex;
-//  align-items: center;
-//  justify-content: space-between;
-//  font-weight: 500;
-//  font-size: 20px;
-//  background: transparent;
-//  border: none;
-//  cursor: pointer;
-//}
-//
-//.question-container.active {
-//  color: #1db954;
-//  background-image: linear-gradient(90deg,transparent,rgba(0,0,0,0.04),transparent);
-//}
-//
-//.wrapper .question-container:hover {
-//  background-image: linear-gradient(90deg,transparent,rgba(0,0,0,0.04),transparent);
-//}
-//
-//.wrapper .arrow {
-//  font-size: 2rem;
-//  transition: .5s ease-in-out;
-//}
-//
-//.arrow.active {
-//  rotate: 180deg;
-//  color: #1db954;
-//}
-//
-//.wrapper .answer-container {
-//  padding: 0 1rem;
-//  transition: height .7s ease-in-out;
-//}
-//
-//.wrapper .answer-content {
-//  padding: 1rem 0;
-//  font-size: 20px;
-//  font-style: italic;
-//}
+.accordion_item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  font-family: var(--font-cera);
+  font-weight: 400;
+  font-size: 36px;
+  padding-bottom: 36px;
+  border-bottom: 1px solid #AEA5A5;
+  padding-top: 36px;
+  width: 796px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.accordion_item_open {
+  font-family: var(--font-cera);
+  font-size: 48px;
+  font-weight: 500;
+  padding-top: 36px;
+}
+
+.arrow_icon {
+ transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.accordion_item_open .arrow_icon {
+  transform: rotate(90deg);
+  opacity: 0;
+}
+
+.accordion_item_content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.content {
+  font-family: var(--font-cera);
+  font-size: 20px;
+  font-weight: 400;
+  max-width: 763px;
+  line-height: 26px;
+  padding-top: 16px;
+}
+
+.accordion_item_content_open {
+  max-height: 500px;
+}
