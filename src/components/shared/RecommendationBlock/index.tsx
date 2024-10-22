@@ -6,7 +6,8 @@ import cn from "classnames";
 import { Container } from "@/components/shared/Container";
 import { Button } from "@/components/ui/Button";
 import Image from "next/image";
-import {RatingBlock} from "@/components/shared/RatingBlock";
+import { RatingBlock } from "@/components/shared/RatingBlock";
+import { ReviewBlock } from "@/components/shared/ReviewBlock";
 
 const RecommendationData = [
   {
@@ -42,7 +43,6 @@ const TermsData = [
   },
 ];
 
-
 export const RecommendationBlock: React.FC = () => {
   return (
     <Container className={styles.container}>
@@ -77,8 +77,13 @@ export const RecommendationBlock: React.FC = () => {
         ))}
       </div>
       <RatingBlock />
-      <Button label={'Получить займ за 5 минут'} className={styles.big_button}/>
-
+      <Button
+        label={"Получить займ за 5 минут"}
+        className={styles.big_button}
+      />
+      <div className={styles.review_block_container}>
+        <ReviewBlock />
+      </div>
     </Container>
   );
 };

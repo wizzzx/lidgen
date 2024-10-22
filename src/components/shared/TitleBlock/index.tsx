@@ -1,25 +1,19 @@
-'use client'
+"use client";
 
 import React from "react";
 import styles from "./index.module.scss";
 import { Container } from "@/components/shared/Container";
 import { Header } from "@/components/ui/Header";
 import { BlockTitle } from "@/components/ui/BlockTitle";
-import {RangeWithTitleVariant} from "@/components/widgets/RangeWithTitleVariant";
-
-interface Props {
-    className?: string;
-    amount: number;
-}
 
 const textData = [
   {
     title: "Займ онлайн - ваш осознанный выбор",
     text: "Получить займ на карту онлайн достаточно легко. Важен выбор финансового партнера, который поможет получить деньги быстро, бережно обращается с вашими персональными данными, дает вам только проверенные порядочные микрофинансовые компании, имеющие стандарт качества и хорошую репутацию",
-  }
+  },
 ];
 
-export const TitleBlock: React.FC<Props> = ({amount}) => {
+export const TitleBlock: React.FC = () => {
   return (
     <Container className={styles.container}>
       <Header />
@@ -28,19 +22,20 @@ export const TitleBlock: React.FC<Props> = ({amount}) => {
           className={styles.title_main}
           title={"ЗАЙМ НА КАРТУ"}
           subtitle={
-              <>
-                  онлайн в <span className={styles.highlighted_word}>Екатеринбурге</span>
-              </>
+            <>
+              онлайн в{" "}
+              <span className={styles.highlighted_word}>Екатеринбурге</span>
+            </>
           }
         />
-          {/*<RangeWithTitleVariant amount={amount} variant={'amount'} title={''} step={10000} min={50000} max={1000000} name={'loan_data.amount'} />*/}
+        {/*<RangeWithTitleVariant amount={amount} variant={'amount'} title={''} step={10000} min={50000} max={1000000} name={'loan_data.amount'} />*/}
         <div>
-            {textData.map((item, index) => (
-                <div key={index} className={styles.text_block}>
-                    <h3 className={styles.title}>{item.title}</h3>
-                    <p className={styles.text}>{item.text}</p>
-                </div>
-            ))}
+          {textData.map((item, index) => (
+            <div key={index} className={styles.text_block}>
+              <h3 className={styles.title}>{item.title}</h3>
+              <p className={styles.text}>{item.text}</p>
+            </div>
+          ))}
         </div>
       </Container>
     </Container>

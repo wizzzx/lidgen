@@ -46,7 +46,7 @@ export const GuaranteeBlock: React.FC = () => {
       <div className={styles.section_container}>
         <Image
           src={"/assets/images/hands.svg"}
-          alt={"Hands holding a phone picture"}
+          alt={"phone picture"}
           width={864}
           height={911}
         />
