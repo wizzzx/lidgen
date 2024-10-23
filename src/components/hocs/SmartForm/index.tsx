@@ -1,42 +1,58 @@
-import React, {FC, HTMLAttributes} from "react";
+import React, { FC, HTMLAttributes } from "react";
 import {
-    FormProvider,
-    UseFormClearErrors,
-    UseFormSetError,
-    UseFormStateReturn
+  FormProvider,
+  UseFormClearErrors,
+  UseFormStateReturn,
 } from "react-hook-form";
-import {UseFormReturn} from 'react-hook-form/dist/types';
-import get from 'lodash/get'
-import styles from './index.module.css'
-import cn from 'classnames'
+import { UseFormReturn } from "react-hook-form/dist/types";
+import get from "lodash/get";
+import styles from "./index.module.css";
+import cn from "classnames";
+
+const onChangeForm = (
+  e: any,
+  errors: UseFormStateReturn<any>["errors"],
+  clearErrors: UseFormClearErrors<any>,
+) => {
+  try {
+    const name = e.target.name;
+    const errorObject = get(errors, name);
+    if (errorObject?.message) {
+      clearErrors(name);
+    }
+  } catch (e) {
+    console.log("An error occurred inside Form/onChangeForm");
+  }
+};
 
 type propsType = {
-    submit: (data: any) => void
-    form: UseFormReturn<any, any>
-    composition?: boolean
+  submit: (data: any) => void;
+  form: UseFormReturn<any, any>;
+  composition?: boolean;
 } & HTMLAttributes<HTMLFormElement>;
 
 export const SmartForm: FC<propsType> = ({
-    children,
-    submit,
-    form,
-    composition,
-    ...props
+  children,
+  submit,
+  form,
+  composition,
+  ...props
 }) => {
-    const onFormChange = (e: any) => {
-        props.onChange && props.onChange(e)
-    }
+  const onFormChange = (e: any) => {
+    props.onChange && props.onChange(e);
+    onChangeForm(e, form.formState.errors, form.clearErrors);
+  };
 
-    return(
-        <form
-            onSubmit={form.handleSubmit(submit)}
-            onChange={onFormChange}
-            {...props}
-            className={cn(styles.container, props.className, {
-                [styles['container--composed']]: composition
-            })}
-        >
-            <FormProvider {...form}>{children}</FormProvider>
-        </form>
-    )
-}
+  return (
+    <form
+      onSubmit={form.handleSubmit(submit)}
+      onChange={onFormChange}
+      {...props}
+      className={cn(styles.container, props.className, {
+        [styles["container--composed"]]: composition,
+      })}
+    >
+      <FormProvider {...form}>{children}</FormProvider>
+    </form>
+  );
+};

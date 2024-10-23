@@ -11,7 +11,11 @@ interface Props {
 }
 
 export const TextInput: React.FC<Props> = ({ placeholder, className }) => {
-  const [inputValue, setInputValue] = React.useState();
+  const formMethods = useForm();
+  const { register, handleSubmit } = formMethods;
+
+  const onSubmit =
+
   return (
     <div>
       <div></div>
