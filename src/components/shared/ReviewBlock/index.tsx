@@ -5,6 +5,7 @@ import styles from "./index.module.scss";
 import { Container } from "@/components/shared/Container";
 import Image from "next/image";
 import Link from "next/link";
+import { ReviewForm } from "@/components/shared/ReviewForm";
 
 const ReviewData = [
   {
@@ -97,7 +98,7 @@ export const ReviewBlock: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className={styles.review_form_container}> wasd</div>
+      <ReviewForm className={styles.review_form_container} />
     </Container>
   );
 };
