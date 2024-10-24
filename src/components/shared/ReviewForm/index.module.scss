@@ -1,0 +1,23 @@
+.container {
+
+}
+
+.section_header {
+  font-family: var(--font-cera);
+  font-weight: 500;
+  font-size: 24px;
+  margin-bottom: 19px;
+}
+
+.stars_container {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  margin-bottom: 42px;
+}
+
+.rating_text {
+  font-family: var(--font-cera);
+  font-weight: 500;
+  font-size: 16px;
+}

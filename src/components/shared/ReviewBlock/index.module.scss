@@ -1,6 +1,8 @@
 .container {
   display: flex;
-  margin-top: 106px;
+  margin: 106px auto 0;
+  width: 1476px;
+  gap: 156px;
 }
 
 .review_container {
@@ -96,4 +98,8 @@
   position: absolute;
   top: 25px;
   right: 25px;
+}
+
+.review_form_container {
+
 }
