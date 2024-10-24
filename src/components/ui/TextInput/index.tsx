@@ -4,6 +4,8 @@ import React from "react";
 import styles from "./index.module.scss";
 import { useForm } from "react-hook-form";
 import { SmartForm } from "@/components/hocs/SmartForm";
+import * as yup from "yup";
+import { yupResolver } from "@hookform/resolvers/yup";
 
 interface Props {
   placeholder?: string;
@@ -11,7 +13,15 @@ interface Props {
 }
 
 export const TextInput: React.FC<Props> = ({ className, placeholder }) => {
-  const formMethods = useForm();
+  const schema = yup.object().shape({
+    review: yup
+      .string()
+      .required("Поле необходимо!")
+      .min(10, "Отзыв должен содержать от 10 до 1000 символов.")
+      .max(1000, "Отзыв должен содержать от 10 до 1000 символов."),
+  });
+
+  const formMethods = useForm({ resolver: yupResolver(schema) });
   const {
     register,
     handleSubmit,
@@ -43,12 +53,6 @@ export const TextInput: React.FC<Props> = ({ className, placeholder }) => {
             },
           })}
         />
-        {errors.review?.type === "checkLength" && (
-          <p className={styles.err_msg}>Минимальное количество символов: 10.</p>
-        )}
-        {errors.review?.type === "matchPattern" && (
-          <p className={styles.err_msg}>Использованы недопустимые символы.</p>
-        )}
       </div>
       <button type={"submit"} className={styles.submit_button}>
         Отправить отзыв
