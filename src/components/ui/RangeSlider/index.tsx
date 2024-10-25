@@ -26,6 +26,7 @@ export const RangeSlider: FC<RangeType> = ({
 }) => {
   const { setValue, control } = useFormContext();
 
+  // * сама линия у react-range не подходит, поэтому я её скрыл и сделал кастомные, тут высчитывается проценты width каждой линии
   const filledLine = ((values[0] - min) * 100) / (max - min);
   const unfilledLine = 100 - ((values[0] - min) * 100) / (max - min);
 
@@ -34,6 +35,8 @@ export const RangeSlider: FC<RangeType> = ({
     name,
   });
 
+  // * юзер в инпут может ввести значение любое, но Range компонента у нас рассчитана только на диапазон min-max
+  //  * поэтому я проверяю значение в инпуте и если оно неподходящее, то не сечу в Range
   useEffect(() => {
     if (formValue && formValue !== values[0]) {
       formValue >= min && formValue <= max && setValues([formValue]);
@@ -74,6 +77,7 @@ export const RangeSlider: FC<RangeType> = ({
               )
             : undefined
         }
+        // * это линии по которым бегаем
         renderTrack={({ props, children }) => (
           <div
             onMouseDown={props.onMouseDown}
@@ -102,6 +106,7 @@ export const RangeSlider: FC<RangeType> = ({
             </div>
           </div>
         )}
+        // * Это кружочек, на который жмякаем
         renderThumb={({ props, isDragged }) => {
           const { key, ...restProps } = props;
 
@@ -133,7 +138,7 @@ export const RangeSlider: FC<RangeType> = ({
         }}
       />
       {!marks && <div className={styles.circle_end} />}
-
+      {/*  * Это всё, что ниже range */}
       {!conditionForLockRangeAmount && !conditionForLockRangeLoanTerms && (
         <>
           <div

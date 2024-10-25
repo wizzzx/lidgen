@@ -1,8 +1,8 @@
 import React, { FC } from "react";
 import cn from "classnames";
 import styles from "./index.module.scss";
-import { RangeSlider } from "@/components/ui/Range";
-import { RangeType } from "@/components/ui/Range/types";
+import { RangeSlider } from "@/components/ui/RangeSlider";
+import { RangeType } from "@/components/ui/RangeSlider/types";
 import { stringHelpers } from "@/helpers/string";
 
 type propsType = {

@@ -1,14 +1,6 @@
 import { Metadata } from "next";
-import { TitleBlock } from "../../components/shared/TitleBlock";
 import { SITE_NAME } from "@/constants/seo.constants";
 import ContainerLayout from "../../components/shared/ContainerLayout";
-import { InstructionsBlock } from "@/components/shared/InstructionsBlock";
-import { TermsBlock } from "@/components/shared/TermsBlock";
-import { RecommendationBlock } from "@/components/shared/RecommendationBlock";
-import { GuaranteeBlock } from "@/components/shared/GuaranteeBlock";
-import { Footer } from "@/components/shared/Footer";
-import { OtherOffersBlock } from "@/components/shared/OtherOffersBlock";
-import { ArticlesBlock } from "@/components/shared/ArticlesBlock";
 
 export const metadata: Metadata = {
   title: {
@@ -23,15 +15,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <>
-      <ContainerLayout>
-        <TitleBlock />
-        <InstructionsBlock />
-        <TermsBlock />
-        <RecommendationBlock />
-        <GuaranteeBlock />
-        <ArticlesBlock />
-        <Footer />
-      </ContainerLayout>
+      <ContainerLayout>{children}</ContainerLayout>
     </>
   );
 }

@@ -5,6 +5,8 @@ import styles from "./index.module.scss";
 import { Container } from "@/components/shared/Container";
 import { Header } from "@/components/ui/Header";
 import { BlockTitle } from "@/components/ui/BlockTitle";
+import { RangeWithTitleVariant } from "@/components/ui/RangeWithTitleVariant";
+import { SmartForm } from "@/components/hocs/SmartForm";
 
 const textData = [
   {
@@ -13,7 +15,11 @@ const textData = [
   },
 ];
 
-export const TitleBlock: React.FC = () => {
+interface Props {
+  amount: number;
+}
+
+export const TitleBlock: React.FC<Props> = ({ amount }) => {
   return (
     <Container className={styles.container}>
       <Header />
@@ -28,7 +34,18 @@ export const TitleBlock: React.FC = () => {
             </>
           }
         />
-        {/*<RangeWithTitleVariant amount={amount} variant={'amount'} title={''} step={10000} min={50000} max={1000000} name={'loan_data.amount'} />*/}
+        <SmartForm submit={} form={}>
+          <RangeWithTitleVariant
+            name={"loan_data.amount"}
+            max={1000000}
+            min={50000}
+            step={10000}
+            title={""}
+            variant={"amount"}
+            amount={amount}
+          />
+        </SmartForm>
+
         <div>
           {textData.map((item, index) => (
             <div key={index} className={styles.text_block}>
