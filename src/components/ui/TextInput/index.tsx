@@ -16,7 +16,7 @@ export const TextInput: React.FC<Props> = ({ className, placeholder }) => {
   const schema = yup.object().shape({
     review: yup
       .string()
-      .required("Поле необходимо!")
+      .required("Поле необходимо заполнить!")
       .min(10, "Отзыв должен содержать от 10 до 1000 символов.")
       .max(1000, "Отзыв должен содержать от 10 до 1000 символов."),
   });
@@ -40,19 +40,14 @@ export const TextInput: React.FC<Props> = ({ className, placeholder }) => {
     >
       <div className={styles.form_control}>
         <label></label>
-        <input
+        <textarea
           className={styles.input}
-          type="text"
           placeholder={placeholder}
-          {...register("review", {
-            required: true,
-            validate: {
-              checkLength: (value) => value.length >= 10,
-              matchPattern: (value) =>
-                /^[\u0400-\u04FFa-zA-Z0-9\s.,!?]+$/.test(value),
-            },
-          })}
+          {...register("review")}
         />
+        {errors.review && (
+          <p className={styles.err_msg}>{errors.review.message}</p>
+        )}
       </div>
       <button type={"submit"} className={styles.submit_button}>
         Отправить отзыв

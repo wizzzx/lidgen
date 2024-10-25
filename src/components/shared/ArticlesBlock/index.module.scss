@@ -1,0 +1,57 @@
+.container {
+
+}
+
+.articles_container {
+  display: flex;
+  width: 1563px;
+  height: 687px;
+  align-content: center;
+  gap: 69px;
+  padding-top: 174px;
+  margin: auto auto 241px;
+}
+
+.card_container {
+  background: #F4F4F6;
+  border: 8px solid white;
+  border-radius: 24px;
+  width: 339px;
+  height: 632px;
+  position: relative;
+}
+
+.text_part {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 270px;
+  height: 238px;
+  margin: 25px auto 45px;
+  line-height: 23px;
+}
+
+.article_header {
+  font-family: var(--font-cera);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.article_content {
+  font-family: var(--font-cera);
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.link {
+  font-family: var(--font-cera);
+  font-weight: 400;
+  font-size: 16px;
+  color: #0387FF;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  position: absolute;
+  right: 29px;
+  bottom: 29px;
+}
