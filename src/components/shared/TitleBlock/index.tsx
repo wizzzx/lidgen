@@ -5,6 +5,8 @@ import styles from "./index.module.scss";
 import { Container } from "@/components/shared/Container";
 import { Header } from "@/components/ui/Header";
 import { BlockTitle } from "@/components/ui/BlockTitle";
+import { SmartForm } from "@/components/hocs/SmartForm";
+import { RangeSlider } from "@/components/ui/RangeSlider";
 
 const textData = [
   {
@@ -28,8 +30,8 @@ export const TitleBlock: React.FC = () => {
             </>
           }
         />
-        {/*<SmartForm submit={() => console.log} form={form}>*/}
-        {/*  <RangeBlock amount={amount} term={term} />*/}
+        {/*<SmartForm submit={} form={}>*/}
+        {/*    /!*<RangeSlider />*!/*/}
         {/*</SmartForm>*/}
         <div>
           {textData.map((item, index) => (
