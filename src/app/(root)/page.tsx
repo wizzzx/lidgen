@@ -1,33 +1,26 @@
 "use client";
 
-import React, { useState } from "react";
-import styles from "./page.module.scss";
-import { useForm, useWatch } from "react-hook-form";
+import React from "react";
 import { Container } from "@/components/shared/Container";
-import { SmartForm } from "@/components/hocs/SmartForm";
+import { InstructionsBlock } from "@/components/shared/InstructionsBlock";
+import { TermsBlock } from "@/components/shared/TermsBlock";
+import { RecommendationBlock } from "@/components/shared/RecommendationBlock";
+import { GuaranteeBlock } from "@/components/shared/GuaranteeBlock";
+import { ArticlesBlock } from "@/components/shared/ArticlesBlock";
+import { Footer } from "@/components/shared/Footer";
+import { TitleBlock } from "@/components/shared/TitleBlock";
 
 export default function Home() {
-  const [activeSection, setActiveSection] = useState("borrower");
-  const form = useForm<any>({
-    reValidateMode: "onSubmit",
-  });
-
-  const amount: number = useWatch({
-    control: form.control,
-    name: "loan_data.amount",
-  });
-
-  const term: number = useWatch({
-    control: form.control,
-    name: "loan_data.terms",
-  });
-
   return (
     <main>
       <Container>
-        <SmartForm submit={() => console.log} form={form}>
-          {/*    slider*/}
-        </SmartForm>
+        <TitleBlock />
+        <InstructionsBlock />
+        <TermsBlock />
+        <RecommendationBlock />
+        <GuaranteeBlock />
+        <ArticlesBlock />
+        <Footer />
       </Container>
     </main>
   );

@@ -39,6 +39,7 @@ export const RangeSlider: FC<RangeType> = ({
   //  * поэтому я проверяю значение в инпуте и если оно неподходящее, то не сечу в Range
   useEffect(() => {
     if (formValue && formValue !== values[0]) {
+      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
       formValue >= min && formValue <= max && setValues([formValue]);
     }
   }, [formValue]);
@@ -59,6 +60,7 @@ export const RangeSlider: FC<RangeType> = ({
         onChange={(values) => {
           setValues(values);
           setValue(name, values[0]);
+          // eslint-disable-next-line @typescript-eslint/no-unused-expressions
           onChange && onChange();
         }}
         // * это метки
@@ -151,9 +153,9 @@ export const RangeSlider: FC<RangeType> = ({
 
           {textInformation &&
             amountForTextInformation &&
-            amountForTextInformation < 80000 && (
+            amountForTextInformation < 50000 && (
               <div className={styles.information}>
-                Больше 12 месяцев - от 80 000₽
+                Больше 12 месяцев - от 50 000₽
               </div>
             )}
 
@@ -165,7 +167,7 @@ export const RangeSlider: FC<RangeType> = ({
           >
             {rangeData
               ? `${rangeData[1]} мес`
-              : `${max === 80001 ? 80000 : max} ₽`}
+              : `${max === 50001 ? 50000 : max} ₽`}
           </div>
         </>
       )}
