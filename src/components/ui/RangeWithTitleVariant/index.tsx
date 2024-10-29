@@ -43,32 +43,23 @@ export const RangeWithTitleVariant: FC<propsType> = ({
 }) => {
   const [values, setValues] = React.useState([rangeProps.min]);
 
+  const handleSliderChange = (values) => {
+    setValues(values[0]);
+  };
+
+  const handleInputChange = (e) => {
+    const newValue = Number(e.target.value);
+    if (newValue >= rangeProps.min && newValue <= rangeProps.max) {
+      setValues(newValue);
+    }
+  };
+
   return (
     <div
       className={cn(styles.container, {
         [`${containerClass}`]: containerClass,
       })}
     >
-      <div className={styles.title_wrapper}>
-        <p className={styles.title}>{title}</p>
-
-        {/*{variant === "amount" && (*/}
-        {/*  <div className={styles.title_amount}>*/}
-        {/*    {amount*/}
-        {/*      ? stringHelpers.transformMoneyValue(amount)*/}
-        {/*      : stringHelpers.transformMoneyValue(50_000)}*/}
-        {/*  </div>*/}
-        {/*)}*/}
-
-        {/*{variant === "term" && (*/}
-        {/*  <div className={styles.title_term}>*/}
-        {/*    {term*/}
-        {/*      ? stringHelpers.monthDeclination(term)*/}
-        {/*      : stringHelpers.monthDeclination(1)}*/}
-        {/*  </div>*/}
-        {/*)}*/}
-      </div>
-
       <RangeSlider
         amountForTextInformation={amountForTextInformation}
         textInformation={textInformation}
@@ -79,8 +70,27 @@ export const RangeWithTitleVariant: FC<propsType> = ({
         className={styles.range}
         name={name}
         values={values}
-        setValues={setValues}
+        setValues={handleSliderChange}
       />
+      <div className={styles.range_with_input_container}>
+        <input type="number" />
+
+        {variant === "amount" && (
+          <div className={styles.title_amount}>
+            {amount
+              ? stringHelpers.transformMoneyValue(amount)
+              : stringHelpers.transformMoneyValue(50_000)}
+          </div>
+        )}
+
+        {variant === "term" && (
+          <div className={styles.title_term}>
+            {term
+              ? stringHelpers.monthDeclination(term)
+              : stringHelpers.monthDeclination(1)}
+          </div>
+        )}
+      </div>
     </div>
   );
 };
