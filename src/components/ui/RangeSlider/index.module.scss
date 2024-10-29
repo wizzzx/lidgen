@@ -1,0 +1,66 @@
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.track_container {
+  height: 36px;
+  display: flex;
+  width: 796px;
+}
+
+.track_container_disabled {
+  pointer-events: none;
+}
+
+.track_line_invisible {
+  height: 0;
+  width: 100%;
+  position: relative;
+  align-self: center;
+}
+
+.track_line_filled {
+  height: 18px;
+  background: linear-gradient(90deg, #0066FF 0%, #70A9FF 100%);
+  border-radius: 53px;
+  position: absolute;
+  left: 0;
+  top: -11px;
+  z-index: -1;
+}
+
+.track_line_unfilled {
+  height: 18px;
+  border-radius: 53px;
+  background-color: #9FA7AF;
+  float: right;
+  position: absolute;
+  right: 0;
+  top: -11px;
+  z-index: -1;
+}
+
+.thumb {
+  height: 42px;
+  width: 42px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 6px solid #6AA3FA;
+  outline: none;
+  top: -3px;
+  position: relative;
+  z-index: 1;
+}
+
+.circle {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
