@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import cn from "classnames";
 import styles from "./index.module.scss";
 import { RangeSlider } from "@/components/ui/RangeSlider";
@@ -41,16 +41,16 @@ export const RangeWithTitleVariant: FC<propsType> = ({
   hasInput = true,
   ...rangeProps
 }) => {
-  const [values, setValues] = React.useState([rangeProps.min]);
+  const [value, setValue] = useState(rangeProps.min);
 
   const handleSliderChange = (values) => {
-    setValues(values[0]);
+    setValue(values[0]);
   };
 
   const handleInputChange = (e) => {
     const newValue = Number(e.target.value);
     if (newValue >= rangeProps.min && newValue <= rangeProps.max) {
-      setValues(newValue);
+      setValue(newValue);
     }
   };
 
@@ -69,11 +69,17 @@ export const RangeWithTitleVariant: FC<propsType> = ({
         {...rangeProps}
         className={styles.range}
         name={name}
-        values={values}
+        values={[value]}
         setValues={handleSliderChange}
       />
       <div className={styles.range_with_input_container}>
-        <input type="number" />
+        <input
+          type="number"
+          value={value}
+          onChange={handleInputChange}
+          className={styles.input}
+          step={10000}
+        />
 
         {variant === "amount" && (
           <div className={styles.title_amount}>
