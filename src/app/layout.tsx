@@ -100,6 +100,7 @@ const sfpro = localFont({
 });
 
 export const viewport: Viewport = {
+  width: "320px",
   initialScale: 1,
   maximumScale: 1,
   userScalable: true,
@@ -110,7 +111,9 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="ru">
-      <body className={`${nunito.className} ${montserrat.className} ${cera.className} ${sfpro.className} app`}>
+      <body
+        className={`${nunito.className} ${montserrat.className} ${cera.className} ${sfpro.className} app`}
+      >
         <Providers>{children}</Providers>
       </body>
     </html>

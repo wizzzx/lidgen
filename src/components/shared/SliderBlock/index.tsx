@@ -5,14 +5,28 @@ import styles from "./index.module.scss";
 import cn from "classnames";
 import { RangeWithInput } from "../../ui/RangeWithInput";
 import { Button } from "@/components/ui/Button";
+import { useFormContext, useWatch } from "react-hook-form";
 
 interface Props {
   className?: string;
-  amount: number;
-  term: number;
 }
 
-export const SliderBlock: React.FC<Props> = ({ className, amount, term }) => {
+export const SliderBlock: React.FC<Props> = ({ className }) => {
+  const { control } = useFormContext();
+
+  const amount: number = useWatch({
+    control,
+    name: "loan_data.amount",
+  });
+
+  const term: number = useWatch({
+    control,
+    name: "loan_data.term",
+  });
+
+  const percent = 4;
+  const amountPlusPercent = amount + (amount * percent) / 100;
+  console.log(amount, term);
   return (
     <>
       <div className={cn(styles.slider_container, className)}>
@@ -39,9 +53,17 @@ export const SliderBlock: React.FC<Props> = ({ className, amount, term }) => {
         />
       </div>
       <div className={styles.button_container}>
-        <div>
-          <p>Вы берете ... до ... (включительно) 23:59 </p>
-          <p>К возврату: ... &#8381;</p>
+        <div className={styles.button_container_text}>
+          <p>
+            Вы берете <span className={styles.bold}>{amount} до 5 апреля </span>
+            (включительно) 23:59{" "}
+          </p>
+          <div className={styles.dot}></div>
+          <p>
+            К возврату:{" "}
+            <span className={styles.struck}>{amountPlusPercent}&#8381;</span>{" "}
+            <span className={styles.payment_final}>{amount}&#8381;</span>
+          </p>
         </div>
         <Button label={"Начать оформление"} className={styles.button} />
       </div>
