@@ -33,24 +33,33 @@ export const RangeWithTitleVariant: FC<propsType> = ({
   amountError,
   conditionForLockRangeAmount,
   conditionForLockRangeLoanTerms,
-  variant = "round",
+  variant = "amount",
   title,
   name,
-  label,
   containerClass,
   hasInput = true,
   ...rangeProps
 }) => {
-  const [value, setValue] = useState(rangeProps.min);
+  const [value, setValue] = useState(rangeProps.min || 0);
+  const [inputValue, setInputValue] = useState(value.toString());
 
   const handleSliderChange = (values) => {
     setValue(values[0]);
+    setInputValue(values[0].toString());
   };
 
-  const handleInputChange = (e) => {
-    const newValue = Number(e.target.value);
-    if (newValue >= rangeProps.min && newValue <= rangeProps.max) {
-      setValue(newValue);
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newValue = e.target.value;
+    setInputValue(newValue);
+
+    const numericValue = Number(newValue);
+    if (
+      newValue !== "" &&
+      !isNaN(numericValue) &&
+      numericValue >= (rangeProps.min || 0) &&
+      numericValue <= (rangeProps.max || 0)
+    ) {
+      setValue(numericValue);
     }
   };
 
@@ -75,27 +84,11 @@ export const RangeWithTitleVariant: FC<propsType> = ({
       <div className={styles.range_with_input_container}>
         <input
           type="number"
-          value={value}
+          value={inputValue}
           onChange={handleInputChange}
           className={styles.input}
           step={10000}
         />
-
-        {variant === "amount" && (
-          <div className={styles.title_amount}>
-            {amount
-              ? stringHelpers.transformMoneyValue(amount)
-              : stringHelpers.transformMoneyValue(50_000)}
-          </div>
-        )}
-
-        {variant === "term" && (
-          <div className={styles.title_term}>
-            {term
-              ? stringHelpers.monthDeclination(term)
-              : stringHelpers.monthDeclination(1)}
-          </div>
-        )}
       </div>
     </div>
   );
