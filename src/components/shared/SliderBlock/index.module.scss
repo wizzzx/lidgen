@@ -1,21 +1,22 @@
-.container {
-
-}
-
-.range_container {
-
-}
-
-.range_legend {
+.slider_container {
   display: flex;
-  justify-content: space-between;
-  font-family: var(--font-nunito);
-  color: #3E5174;
-  font-size: 22px;
+  flex-direction: column;
+  gap: 53px;
+  margin: 104px auto 160px;
+}
+
+.button {
+  width: 1068px;
+  height: 86px;
+  border-radius: 12px;
+  background: #0066FF;
+  color: #FFFFFF;
+  font-family: var(--font-inter);
+  font-size: 32px;
   font-weight: 500;
 }
 
-.second_header {
 
-}
+
+
 

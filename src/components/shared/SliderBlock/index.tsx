@@ -4,6 +4,7 @@ import React from "react";
 import styles from "./index.module.scss";
 import cn from "classnames";
 import { RangeWithInput } from "../../ui/RangeWithInput";
+import { Button } from "@/components/ui/Button";
 
 interface Props {
   className?: string;
@@ -14,38 +15,35 @@ interface Props {
 export const SliderBlock: React.FC<Props> = ({ className, amount, term }) => {
   return (
     <>
-      <div className={cn(styles.container, className)}>
-        <div className={styles.range_container}>
-          <div className={styles.range_legend}>
-            <p>50 тыс.</p>
-            <p className={styles.second_header}>1 млн.</p>
-          </div>
-          <RangeWithInput
-            amount={amount}
-            variant={"amount"}
-            name={"loan_data.amount"}
-            step={10000}
-            max={1000000}
-            min={50000}
-            title={""}
-          />
+      <div className={cn(styles.slider_container, className)}>
+        <RangeWithInput
+          amount={amount}
+          variant={"amount"}
+          name={"loan_data.amount"}
+          step={10000}
+          max={1000000}
+          min={50000}
+          startHeader={"50 тыс."}
+          endHeader={"1 млн."}
+        />
+        <RangeWithInput
+          name={"loan_data.term"}
+          max={24}
+          min={1}
+          variant={"term"}
+          step={1}
+          rangeData={[1, 24]}
+          term={term}
+          startHeader={"1 месяц"}
+          endHeader={"2 года"}
+        />
+      </div>
+      <div className={styles.button_container}>
+        <div>
+          <p>Вы берете ... до ... (включительно) 23:59 </p>
+          <p>К возврату: ... &#8381;</p>
         </div>
-        <div className={styles.range_container}>
-          <div className={styles.range_legend}>
-            <p>1 месяц</p>
-            <p className={styles.second_header}>2 года</p>
-          </div>
-          <RangeWithInput
-            name={"loan_data.term"}
-            max={24}
-            min={1}
-            variant={"term"}
-            title={""}
-            step={1}
-            rangeData={[1, 24]}
-            term={term}
-          />
-        </div>
+        <Button label={"Начать оформление"} className={styles.button} />
       </div>
     </>
   );
