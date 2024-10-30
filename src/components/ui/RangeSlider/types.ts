@@ -14,6 +14,6 @@ export type RangeType = {
   name: string;
   values: any[];
   defaultValue?: string;
-  setValues: React.Dispatch<React.SetStateAction<any[]>>;
+  setValues: (values: number[]) => void;
   onChange?: () => void;
 } & AllHTMLAttributes<HTMLDivElement>;

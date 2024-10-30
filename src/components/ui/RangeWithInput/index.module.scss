@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  gap: 38px;
+}
+
+.input {
+  width: 235px;
+  height: 59px;
+  border-radius: 6px;
+  font-family: var(--font-montserrat);
+  font-size: 32px;
+  font-weight: 500;
+  border: transparent;
+  text-align: center;
+}

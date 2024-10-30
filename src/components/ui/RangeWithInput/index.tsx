@@ -3,7 +3,6 @@ import cn from "classnames";
 import styles from "./index.module.scss";
 import { RangeSlider } from "@/components/ui/RangeSlider";
 import { RangeType } from "@/components/ui/RangeSlider/types";
-import { stringHelpers } from "@/helpers/string";
 
 type propsType = {
   textInformation?: boolean;
@@ -25,7 +24,7 @@ type propsType = {
   loading?: boolean;
 } & Omit<RangeType, "values" | "setValues">;
 
-export const RangeWithTitleVariant: FC<propsType> = ({
+export const RangeWithInput: FC<propsType> = ({
   amountForTextInformation,
   textInformation,
   amount,
@@ -43,7 +42,7 @@ export const RangeWithTitleVariant: FC<propsType> = ({
   const [value, setValue] = useState(rangeProps.min || 0);
   const [inputValue, setInputValue] = useState(value.toString());
 
-  const handleSliderChange = (values) => {
+  const handleSliderChange = (values: number[]) => {
     setValue(values[0]);
     setInputValue(values[0].toString());
   };
@@ -53,9 +52,9 @@ export const RangeWithTitleVariant: FC<propsType> = ({
     setInputValue(newValue);
 
     const numericValue = Number(newValue);
+
     if (
-      newValue !== "" &&
-      !isNaN(numericValue) &&
+      newValue !== null &&
       numericValue >= (rangeProps.min || 0) &&
       numericValue <= (rangeProps.max || 0)
     ) {
@@ -81,15 +80,14 @@ export const RangeWithTitleVariant: FC<propsType> = ({
         values={[value]}
         setValues={handleSliderChange}
       />
-      <div className={styles.range_with_input_container}>
-        <input
-          type="number"
-          value={inputValue}
-          onChange={handleInputChange}
-          className={styles.input}
-          step={10000}
-        />
-      </div>
+
+      <input
+        type="number"
+        value={inputValue}
+        onChange={handleInputChange}
+        className={styles.input}
+        step={10000}
+      />
     </div>
   );
 };
