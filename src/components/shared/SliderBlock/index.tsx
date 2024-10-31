@@ -28,7 +28,7 @@ export const SliderBlock: React.FC<Props> = ({ className }) => {
   const amountPlusPercent = amount + (amount * percent) / 100;
   console.log(amount, term);
   return (
-    <>
+    <div className={styles.container}>
       <div className={cn(styles.slider_container, className)}>
         <RangeWithInput
           amount={amount}
@@ -67,6 +67,6 @@ export const SliderBlock: React.FC<Props> = ({ className }) => {
         </div>
         <Button label={"Начать оформление"} className={styles.button} />
       </div>
-    </>
+    </div>
   );
 };

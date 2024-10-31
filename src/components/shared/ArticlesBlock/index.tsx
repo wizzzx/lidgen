@@ -49,6 +49,8 @@ const ArticlesData = [
 export const ArticlesBlock: React.FC = () => {
   return (
     <Container className={styles.container}>
+      <div className={styles.ellipse}></div>
+      <div className={styles.white_ellipse}></div>
       <div className={styles.articles_container}>
         {ArticlesData.map((item) => (
           <div key={item.id} className={styles.card_container}>
@@ -69,7 +71,7 @@ export const ArticlesBlock: React.FC = () => {
           </div>
         ))}
       </div>
-      <OtherOffersBlock />
+      <OtherOffersBlock className={styles.other_offers} />
     </Container>
   );
 };

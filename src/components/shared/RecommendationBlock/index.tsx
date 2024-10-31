@@ -2,7 +2,6 @@
 
 import React from "react";
 import styles from "./index.module.scss";
-import cn from "classnames";
 import { Container } from "@/components/shared/Container";
 import { Button } from "@/components/ui/Button";
 import Image from "next/image";

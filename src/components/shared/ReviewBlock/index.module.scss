@@ -3,6 +3,9 @@
   width: 1476px;
   gap: 156px;
   margin: 106px auto 103px;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }
 
 .review_container {
@@ -15,7 +18,7 @@
 .review_subcontainer {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 6px;
 }
 
 .review_cards_container {
@@ -63,7 +66,7 @@
 
 .section_header {
   font-family: var(--font-cera);
-  font-size: 36px;
+  font-size: 64px;
   font-weight: 500;
 }
 

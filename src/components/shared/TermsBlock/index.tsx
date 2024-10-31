@@ -7,7 +7,7 @@ import { Container } from "@/components/shared/Container";
 export const TermsData = [
   {
     title: "Сумма до",
-    text: "30 000",
+    text: "30 000    ₽",
   },
   {
     title: "Срок",
@@ -35,7 +35,11 @@ export const TermsBlock: React.FC = () => {
         {TermsData.map((item, index) => (
           <div key={index} className={styles.term_container}>
             <div className={styles.term_title}>{item.title}</div>
-            <div className={styles.term_text}>{item.text}</div>
+            <div
+              className={`${styles.term_text} ${item.title === "Гражданство" ? styles.extra_margin : ""}`}
+            >
+              {item.text}
+            </div>
           </div>
         ))}
       </div>

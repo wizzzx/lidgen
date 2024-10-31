@@ -6,6 +6,8 @@
   background-position: center;
   background-size: auto 1339px;
   padding-bottom: 57px;
+  position: relative;
+
 }
 
 .slider_block_container {
@@ -30,6 +32,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  margin-top: 160px;
 }
 
 .title {
@@ -54,4 +57,18 @@
   text-decoration-skip-ink: none;
   text-underline-offset: 14px;
 }
+
+.ellipse {
+  position: absolute;
+  width: 1398px;
+  height: 1384px;
+  top: -232px;
+  left: 1152px;
+  background: rgba(129, 187, 228, 0.26);
+  opacity: 0.4;
+  border-radius: 100%;
+  filter: blur(331px);
+
+}
+
 

@@ -1,8 +1,13 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
 .slider_container {
   display: flex;
   flex-direction: column;
   gap: 53px;
-  margin: 104px auto 160px;
+  margin: 104px auto 72px;
 }
 
 .button_container {

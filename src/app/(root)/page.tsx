@@ -9,6 +9,7 @@ import { GuaranteeBlock } from "@/components/shared/GuaranteeBlock";
 import { ArticlesBlock } from "@/components/shared/ArticlesBlock";
 import { Footer } from "@/components/shared/Footer";
 import { TitleBlock } from "@/components/shared/TitleBlock";
+import styles from "./page.module.scss";
 
 export default function Home() {
   return (
