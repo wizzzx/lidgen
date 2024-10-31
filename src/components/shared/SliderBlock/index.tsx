@@ -28,8 +28,8 @@ export const SliderBlock: React.FC<Props> = ({ className }) => {
   const amountPlusPercent = amount + (amount * percent) / 100;
   console.log(amount, term);
   return (
-    <div className={styles.container}>
-      <div className={cn(styles.slider_container, className)}>
+    <div className={cn(styles.container, className)}>
+      <div className={styles.slider_container}>
         <RangeWithInput
           amount={amount}
           variant={"amount"}

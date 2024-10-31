@@ -30,7 +30,7 @@ export const TitleBlock: React.FC = () => {
           }
         />
         <SmartForm submit={() => console.log} form={form}>
-          <SliderBlock />
+          <SliderBlock className={styles.slider_block} />
         </SmartForm>
         <div>
           <div className={styles.text_block}>

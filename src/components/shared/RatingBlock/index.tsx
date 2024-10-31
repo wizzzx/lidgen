@@ -9,32 +9,37 @@ const RatingData = [
   {
     title: "Деньги сразу",
     subtitle: 'ООО МКК "Скороденьги"',
-    platform1: "Banki.ru 5.0",
-    platform2: "Otzovik 5.0",
+    platform1: "Banki.ru",
+    platform2: "Otzovik",
+    rating: "5.0",
   },
   {
     title: "Деньги сразу",
     subtitle: 'ООО МКК "Миг Финанс"',
-    platform1: "Banki.ru 5.0",
-    platform2: "Otzovik 5.0",
+    platform1: "Banki.ru",
+    platform2: "Otzovik",
+    rating: "5.0",
   },
   {
     title: "Деньги сразу",
     subtitle: 'ООО МКК "КешБек Налом"',
-    platform1: "Banki.ru 5.0",
-    platform2: "Otzovik 5.0",
+    platform1: "Banki.ru",
+    platform2: "Otzovik",
+    rating: "5.0",
   },
   {
     title: "Деньги сразу",
     subtitle: 'ООО МКК "Денюжки под ПТС"',
-    platform1: "Banki.ru 5.0",
-    platform2: "Otzovik 5.0",
+    platform1: "Banki.ru",
+    platform2: "Otzovik",
+    rating: "5.0",
   },
   {
     title: "Деньги сразу",
     subtitle: 'ООО МКК "Первая финансовая организация"',
-    platform1: "Banki.ru 5.0",
-    platform2: "Otzovik 5.0",
+    platform1: "Banki.ru",
+    platform2: "Otzovik",
+    rating: "5.0",
   },
 ];
 
@@ -48,8 +53,14 @@ export const RatingBlock: React.FC = () => {
             <div className={styles.subtitle}>{item.subtitle}</div>
           </div>
           <div className={styles.button_container}>
-            <div className={styles.platform1}>{item.platform1}</div>
-            <div className={styles.platform2}>{item.platform2}</div>
+            <div className={styles.platform}>
+              <span className={styles.underlined}>{item.platform1}</span>&nbsp;
+              <span className={styles.rating_number}>{item.rating}</span>
+            </div>
+            <div className={styles.platform}>
+              {item.platform2}&nbsp;
+              <span className={styles.rating_number}>{item.rating}</span>
+            </div>
             <Button
               label={"получить за 5 минут"}
               className={styles.rating_button}
