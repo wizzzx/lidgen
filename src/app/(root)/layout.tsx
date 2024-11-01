@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { SITE_NAME } from "@/constants/seo.constants";
 import ContainerLayout from "../../components/shared/ContainerLayout";
+import React from "react";
 
 export const metadata: Metadata = {
   title: {
