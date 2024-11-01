@@ -6,6 +6,7 @@ import { Container } from "@/components/shared/Container";
 import Image from "next/image";
 import Link from "next/link";
 import { ReviewForm } from "@/components/shared/ReviewForm";
+import { StarRating } from "@/components/ui/StarRating";
 
 const ReviewData = [
   {
@@ -13,53 +14,32 @@ const ReviewData = [
     title: "Константин Душный",
     text: "Очень довольна условиями предоставления займов и обслуживанием. Сотрудники вежливы и внимательны. Всегда есть различные бонусы и акции. Есть возможность совершать все операции через мобильное приложение...Ещё",
     date: "02.08.2023",
-    stars: 4,
   },
   {
     id: 2,
     title: "Константин Душный",
     text: "Все быстро. Вежливо. Удобно.",
     date: "02.08.2023",
-    stars: 4,
   },
   {
     id: 3,
     title: "Константин Душный",
     text: "Все быстро. Вежливо. Удобно.",
     date: "02.08.2023",
-    stars: 4,
   },
   {
     id: 4,
     title: "Николай А.",
     text: "Все быстро. Вежливо. Удобно.",
     date: "02.08.2023",
-    stars: 4,
   },
   {
     id: 5,
     title: "Ангелина",
     text: "Отличные специалисты, много акций! Быстрое оформление без кучи документов. Рекомендую",
     date: "02.08.2023",
-    stars: 4,
   },
 ];
-
-const StarRating = ({ stars }: { stars: number }) => {
-  return (
-    <div>
-      {Array.from({ length: stars }, (_, index) => (
-        <Image
-          key={index}
-          src={"/assets/icons/ui/star_rating.svg"}
-          alt={"star"}
-          width={14}
-          height={14}
-        />
-      ))}
-    </div>
-  );
-};
 
 export const ReviewBlock: React.FC = () => {
   return (
@@ -78,7 +58,13 @@ export const ReviewBlock: React.FC = () => {
                 <h4 className={styles.name}>{item.title}</h4>
                 <div className={styles.date_stars_container}>
                   <time>{item.date}</time>
-                  <StarRating stars={item.stars} />
+                  <StarRating
+                    initialRating={4}
+                    totalStars={5}
+                    width={14}
+                    height={14}
+                    readOnly={true}
+                  />
                 </div>
               </div>
               <p className={styles.review_text}>{item.text}</p>

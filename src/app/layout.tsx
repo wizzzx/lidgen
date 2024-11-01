@@ -5,6 +5,7 @@ import { Montserrat } from "next/font/google";
 import { Viewport } from "next";
 import "../../public/assets/styles/global.scss";
 import React from "react";
+import cn from "classnames";
 
 const nunito = Nunito({
   subsets: ["cyrillic", "latin"],
@@ -110,7 +111,15 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="ru">
+    <html
+      lang="ru"
+      className={cn(
+        cera.variable,
+        sfpro.variable,
+        nunito.variable,
+        montserrat.variable,
+      )}
+    >
       <body
         className={`${nunito.className} ${montserrat.className} ${cera.className} ${sfpro.className} app`}
       >

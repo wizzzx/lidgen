@@ -18,7 +18,7 @@ export const TitleBlock: React.FC = () => {
     <Container className={styles.container}>
       <div className={styles.ellipse}></div>
       <Header />
-      <Container className={styles.slider_block_container}>
+      <div className={styles.slider_block_container}>
         <BlockTitle
           className={styles.title_main}
           title={"ЗАЙМ НА КАРТУ"}
@@ -44,7 +44,7 @@ export const TitleBlock: React.FC = () => {
             </p>
           </div>
         </div>
-      </Container>
+      </div>
     </Container>
   );
 };

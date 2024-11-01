@@ -8,12 +8,16 @@ interface Props {
   initialRating: number;
   totalStars: number;
   readOnly?: boolean;
+  width: number;
+  height: number;
 }
 
 export const StarRating: React.FC<Props> = ({
   initialRating,
   totalStars,
   readOnly,
+  width,
+  height,
 }) => {
   const [rating, setRating] = useState(initialRating);
   const [hover, setHover] = useState(0);
@@ -39,16 +43,16 @@ export const StarRating: React.FC<Props> = ({
                 alt={"star"}
                 loading={"lazy"}
                 className={styles.star_image}
-                width={20}
-                height={20}
+                width={width}
+                height={height}
               />
             ) : (
               <Image
                 src={"/assets/icons/ui/star_rating_gray.svg"}
                 alt={"star_gray"}
                 className={styles.star_image}
-                width={20}
-                height={20}
+                width={width}
+                height={height}
                 priority
               />
             )}

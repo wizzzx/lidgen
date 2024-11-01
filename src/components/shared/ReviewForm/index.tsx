@@ -16,7 +16,7 @@ export const ReviewForm: React.FC<Props> = ({ className }) => {
     <div className={cn(styles.container, className)}>
       <h4 className={styles.section_header}>Напишите ваш отзыв</h4>
       <div className={styles.stars_container}>
-        <StarRating initialRating={0} totalStars={5} />
+        <StarRating initialRating={0} totalStars={5} width={20} height={20} />
         <p className={styles.rating_text}>Оцените сервис</p>
       </div>
       <TextInput placeholder={"Оцените сервис"} />

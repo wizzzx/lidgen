@@ -21,7 +21,7 @@ export const InstructionsBlock: React.FC = () => {
           width={338}
           height={686}
           className={styles.image}
-          priority={true}
+          loading={"lazy"}
         />
         <StepList
           texts={[

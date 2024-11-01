@@ -49,6 +49,7 @@ export const GuaranteeBlock: React.FC = () => {
           alt={"phone picture"}
           width={864}
           height={911}
+          loading={"lazy"}
         />
         <AccordionBlock data={GuaranteeData} />
       </div>
