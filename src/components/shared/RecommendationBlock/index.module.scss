@@ -1,3 +1,5 @@
+@import '/public/assets/styles/media';
+
 .container {
   display: flex;
   flex-direction: column;
@@ -13,15 +15,21 @@
   text-align: left;
   margin-bottom: 124px;
   width: 1616px;
+
+  @include desktop {
+    max-width: 1308px;
+  }
 }
 
 .recommendations_container {
   display: flex;
   flex-direction: row;
-  margin-left: 154px;
-  margin-right: 154px;
   gap: 146px;
   align-content: space-between;
+  
+  @include desktop {
+    gap: 48px;
+  }
 }
 
 .recommendation_container {

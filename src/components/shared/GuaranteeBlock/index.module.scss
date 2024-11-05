@@ -1,3 +1,5 @@
+@import "public/assets/styles/media";
+
 .container {
     background: white;
     display: flex;
@@ -9,10 +11,14 @@
     align-items: center;
     position: relative;
     z-index: 2;
+
+    @include desktop {
+
+    }
 }
 
 .section_header {
-    font-family: var(--font-cera);
+    font-family: var(--font-sfpro);
     font-weight: 500;
     font-size: 64px;
     text-align: center;
@@ -25,3 +31,17 @@
     align-items: center;
 }
 
+.image {
+    @include desktop {
+        width: 672px;
+        height: 709px;
+    }
+}
+
+.accordion_block {
+
+    @include desktop {
+        width: 640px;
+        height: 466px;
+    }
+}

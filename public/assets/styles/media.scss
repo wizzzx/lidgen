@@ -1,8 +1,8 @@
 $desktop-above: 1600px;
 $desktop: 1599px;
 
-$desktop-s-above: 1268px;
-$desktop-s: 1257px;
+$desktop-s-above: 1280px;
+$desktop-s: 1279px;
 
 $desktop-xs-above: 1024px;
 $desktop-xs: 1023px;
@@ -87,5 +87,26 @@ $mobile: 319px;
   }
 }
 
+.hidden-tablets {
+  @include tablets {
+    display: none !important;
+  }
+}
 
+.visible-tablets {
+  @include tablets-above {
+    display: none !important;
+  }
+}
 
+.hidden-mobile {
+  @include mobile {
+    display: none !important;
+  }
+}
+
+.visible-mobile {
+  @include mobile-above {
+    display: none !important;
+  }
+}

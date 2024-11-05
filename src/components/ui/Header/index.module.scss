@@ -1,29 +1,42 @@
+@import "/public/assets/styles/media";
+
 .header {
-  position: static;
-  width: 100%;
-  background-color: transparent;
-  margin-top: 23.56px;
+  display: flex;
+  align-items: center;
+  width: 1595px;
+  margin: 24px auto;
+  justify-content: space-between;
+  gap: 602px;
+
+  @include desktop {
+    width: 1312px;
+    gap: 464px;
+  }
 }
 
 .logo_link {
-  margin-left: 155px;
   font-size: 24px;
   font-family: var(--font-cera);
   font-weight: 700;
   line-height: 30px;
 
+  @include desktop {
+    width: 213px;
+
+  }
 }
 
 .nav_buttons {
   font-family: var(--font-nunito);
   font-weight: 500;
   display: flex;
-  flex-direction: row;
   gap: 32px;
-  float: right;
-  padding-top: 4.77px;
-  margin-right: 170px;
   font-size: 16px;
+  width: 635px;
+
+  @include desktop {
+
+  }
 }
 
 .highlight_logo {

@@ -50,8 +50,12 @@ export const GuaranteeBlock: React.FC = () => {
           width={864}
           height={911}
           loading={"lazy"}
+          className={styles.image}
         />
-        <AccordionBlock data={GuaranteeData} />
+        <AccordionBlock
+          data={GuaranteeData}
+          className={styles.accordion_block}
+        />
       </div>
     </Container>
   );

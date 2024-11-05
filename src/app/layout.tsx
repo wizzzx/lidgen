@@ -3,7 +3,7 @@ import { Nunito } from "next/font/google";
 import localFont from "next/font/local";
 import { Montserrat } from "next/font/google";
 import { Viewport } from "next";
-import "../../public/assets/styles/global.scss";
+import "../../public/assets/styles/globals.scss";
 import React from "react";
 import cn from "classnames";
 

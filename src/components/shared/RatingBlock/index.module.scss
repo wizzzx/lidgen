@@ -1,9 +1,9 @@
+@import "/public/assets/styles/media";
+
 .container {
   display: flex;
   flex-direction: column;
-  padding-left: 156px;
   padding-top: 99px;
-
 }
 
 .rating_container {
@@ -14,8 +14,12 @@
   padding-bottom: 34px;
   border-bottom: 1px solid #D2D2D2;
   padding-top: 48px;
-  margin-right: 152px;
   width: 1609px;
+  margin: auto;
+
+  @include desktop {
+    max-width: 1308px;
+  }
 }
 
 .naming_container {
@@ -41,6 +45,10 @@
   flex-direction: row;
   align-items: center;
   gap: 36px;
+
+  @include desktop {
+    gap: 29px;
+  }
 }
 
 .rating_button {
@@ -48,13 +56,19 @@
    height: 78px;
   background-color: #0066FF;
   border-radius: 12px;
-  font-family: var(--font-cera);
+  font-family: var(--font-sfpro);
   font-weight: 400;
   font-size: 32px;
   color: #FFFFFF;
   padding: 15px 28px 15px 33px;
   gap: 17px;
 
+  @include desktop {
+    width: 352px;
+    font-size: 24px;
+    font-weight: 600;
+    padding: 15px 27px;
+  }
 }
 
 .rating_number {

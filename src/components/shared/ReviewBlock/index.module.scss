@@ -1,3 +1,5 @@
+@import "/public/assets/styles/media";
+
 .container {
   display: flex;
   width: 1476px;
@@ -6,6 +8,12 @@
   justify-content: center;
   align-content: center;
   align-items: center;
+
+  @include desktop {
+    gap: 148px;
+    width: 1312px;
+    height: 763px;
+  }
 }
 
 .review_container {
@@ -27,6 +35,16 @@
   grid-template-rows: 1fr 1fr;
   width: 796px;
   height: 501px;
+
+  @include desktop {
+    .review_card:nth-child(-n + 2) {
+      display: none;
+    }
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 632px;
+    height: 590px;
+  }
 }
 
 .review_card_container {
@@ -44,12 +62,21 @@
   background: rgba(245, 245, 245, 1);
   border-radius: 12px;
   gap: 20px;
+
+  @include desktop {
+    width: 300px;
+    height: 284px;
+  }
 }
 
 .name {
   font-family: var(--font-cera);
   font-weight: 500;
   font-size: 16px;
+
+  @include desktop {
+    font-size: 19px;
+  }
 }
 
 .date_stars_container {
@@ -62,16 +89,25 @@
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
+
+  @include desktop {
+    font-size: 14px;
+    line-height: 18px;
+  }
 }
 
 .section_header {
-  font-family: var(--font-cera);
+  font-family: var(--font-sfpro);
   font-size: 64px;
   font-weight: 500;
+
+  @include desktop {
+    width: 712px;
+   }
 }
 
 .section_subheader {
-  font-family: var(--font-cera);
+  font-family: var(--font-sfpro);
   font-size: 24px;
   font-weight: 400;
 }
@@ -86,6 +122,11 @@
   height: 238px;
   border-radius: 12px;
   border: 1px solid #0066FF;
+
+  @include desktop {
+    width: 300px;
+    height: 284px;
+  }
 }
 
 .link {
