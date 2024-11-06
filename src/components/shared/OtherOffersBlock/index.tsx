@@ -55,12 +55,7 @@ export const OtherOffersBlock: React.FC<Props> = ({ className }) => {
       <h3 className={styles.section_header}>Другие предложения</h3>
       <ul className={styles.offers_container}>
         {OffersData.map((item, index) => (
-          <li
-            key={index}
-            className={cn(styles.item, {
-              [styles.item_alternative_color]: index % 2 === 1,
-            })}
-          >
+          <li key={index} className={styles.item}>
             <Link href={item.route}>{item.title}</Link>
           </li>
         ))}

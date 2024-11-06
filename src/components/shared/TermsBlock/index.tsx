@@ -7,7 +7,7 @@ import { Container } from "@/components/shared/Container";
 export const TermsData = [
   {
     title: "Сумма до",
-    text: "30 000    ₽",
+    text: "30 000 ₽",
   },
   {
     title: "Срок",

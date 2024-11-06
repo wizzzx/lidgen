@@ -60,6 +60,7 @@ export const ArticlesBlock: React.FC = () => {
               width={324}
               height={266}
               loading={"lazy"}
+              className={styles.card_image}
             />
             <div className={styles.text_part}>
               <h4 className={styles.article_header}>{item.title}</h4>

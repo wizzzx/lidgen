@@ -1,3 +1,5 @@
+@import "/public/assets/styles/media";
+
 .container {
   display: flex;
   flex-direction: row;
@@ -5,6 +7,10 @@
   gap: 440px;
   align-items: center;
   justify-content: center;
+
+  @include desktop {
+    gap: 147px;
+  }
 }
 
 .footer_subcontainer_left {
@@ -15,7 +21,9 @@
 }
 
 .footer_subcontainer_right {
-
+    @include desktop {
+      max-width: 630px;
+    }
 }
 
 .menu_items {
@@ -24,7 +32,6 @@
   flex-wrap: wrap;
   column-gap: 60px;
   row-gap: 37px;
-
 }
 
 .menu {

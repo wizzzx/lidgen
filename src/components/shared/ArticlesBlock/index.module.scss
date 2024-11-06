@@ -1,3 +1,5 @@
+@import "public/assets/styles/media";
+
 .container {
   background: #F9F9F9;
   position: relative;
@@ -14,6 +16,13 @@
   margin: auto auto 241px;
   z-index: 2;
   position: relative;
+
+  @include desktop {
+    max-width: 1312px;
+    gap: 32px;
+    margin: auto auto 40px;
+    padding-top: 72px;
+  }
 }
 
 .card_container {
@@ -24,7 +33,9 @@
   height: 632px;
   position: relative;
   filter: drop-shadow(0px 50px 25px rgba(0,0,0,0.3));
-
+    @include desktop {
+      max-height: 540px;
+    }
 }
 
 .text_part {
@@ -42,12 +53,20 @@
   font-weight: 500;
   font-size: 24px;
   line-height: 30px;
+
+  @include desktop {
+    font-size: 20px;
+  }
 }
 
 .article_content {
   font-family: var(--font-cera);
   font-weight: 400;
   font-size: 18px;
+
+  @include desktop {
+    font-size: 16px;
+  }
 }
 
 .link {
@@ -73,6 +92,9 @@
   border-radius: 100%;
   filter: blur(331px);
   z-index: 0;
+  @include desktop {
+    display: none;
+  }
 }
 
 .white_ellipse {
@@ -85,9 +107,19 @@
   border-radius: 100%;
   filter: blur(331px);
   z-index: 0;
+  @include desktop {
+    display: none;
+  }
 }
 
 .other_offers {
 position: relative;
   z-index: 1;
+}
+
+.card_image {
+  @include desktop {
+    width: 292px;
+    height: 214px;
+  }
 }
