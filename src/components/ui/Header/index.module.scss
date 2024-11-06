@@ -22,7 +22,10 @@
 
   @include desktop {
     width: 213px;
+  }
 
+  @include mobile-above {
+    font-size: 20px;
   }
 }
 
