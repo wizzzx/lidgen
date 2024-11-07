@@ -3,19 +3,19 @@
 .header {
   display: flex;
   align-items: center;
-  width: 1595px;
+  max-width: 1595px;
+  width: 100%;
   margin: 24px auto;
   justify-content: space-between;
-  gap: 602px;
 
-  @include desktop {
-    width: 1312px;
-    gap: 464px;
-  }
-
-  @include mobile {
-    width: 343px;
-  }
+  //@include desktop {
+  //  width: 1312px;
+  //  gap: 464px;
+  //}
+  //
+  //@include mobile {
+  //  width: 343px;
+  //}
 }
 
 .logo_link {
@@ -40,10 +40,6 @@
   gap: 32px;
   font-size: 16px;
   width: 635px;
-
-  @include desktop {
-
-  }
 }
 
 .highlight_logo {
