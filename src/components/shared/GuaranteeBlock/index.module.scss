@@ -12,9 +12,7 @@
     position: relative;
     z-index: 2;
 
-    @include desktop {
 
-    }
 }
 
 .section_header {
@@ -26,9 +24,12 @@
 
 .section_container {
     display: flex;
-    flex-direction: row;
     gap: 106px;
     align-items: center;
+
+    @include mobile {
+        flex-direction: column;
+    }
 }
 
 .image {
@@ -36,11 +37,21 @@
         width: 672px;
         height: 709px;
     }
+
+    @include mobile {
+        width: 343px;
+        height: 519px;
+
+    }
 }
 
 .accordion_block {
 
     @include desktop {
         width: 640px;
+    }
+
+    @include mobile {
+        width: 360px;
     }
 }

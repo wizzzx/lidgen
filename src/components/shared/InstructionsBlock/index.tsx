@@ -10,10 +10,9 @@ import { StepList } from "@/components/ui/StepList";
 export const InstructionsBlock: React.FC = () => {
   return (
     <Container className={styles.container}>
-      <BlockTitle
-        className={styles.title_text}
-        title={"Как получить займ онлайн на карту?"}
-      />
+      <div className={styles.title_text}>
+        Как получить займ онлайн на карту?
+      </div>
       <Container className={styles.sub_container}>
         <Image
           src="/assets/images/3034.svg"

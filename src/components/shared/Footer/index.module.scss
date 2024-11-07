@@ -2,7 +2,6 @@
 
 .container {
   display: flex;
-  flex-direction: row;
   padding: 50px 320px 35px 168px;
   gap: 440px;
   align-items: center;
@@ -10,6 +9,11 @@
 
   @include desktop {
     gap: 147px;
+  }
+
+  @include mobile {
+    flex-direction: column;
+    margin-top: 150px;
   }
 }
 

@@ -1,3 +1,5 @@
+@import "public/assets/styles/media";
+
 .container {
   display: flex;
   justify-content: center;
@@ -8,6 +10,11 @@
   height: 36px;
   display: flex;
   width: 796px;
+
+  @include mobile {
+    width: 343px;
+    height: 8px;
+  }
 }
 
 .track_container_disabled {
@@ -29,6 +36,11 @@
   left: 0;
   top: -11px;
   z-index: -1;
+
+  @include mobile {
+    height: 8px;
+    border-radius: 23px;
+  }
 }
 
 .track_line_unfilled {
@@ -40,6 +52,11 @@
   right: 0;
   top: -11px;
   z-index: -1;
+
+  @include mobile {
+    height: 8px;
+    border-radius: 23px;
+  }
 }
 
 .thumb {
@@ -55,6 +72,12 @@
   top: -3px;
   position: relative;
   z-index: 1;
+
+  @include mobile {
+    height: 18px;
+    width: 18px;
+    border: 3px solid #6AA3FA;
+  }
 }
 
 .circle {

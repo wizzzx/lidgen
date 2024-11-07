@@ -3,7 +3,6 @@ import cn from "classnames";
 import styles from "./index.module.scss";
 import { RangeSlider } from "@/components/ui/RangeSlider";
 import { RangeType } from "@/components/ui/RangeSlider/types";
-import { useWatch } from "react-hook-form";
 
 type propsType = {
   textInformation?: boolean;

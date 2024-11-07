@@ -12,6 +12,10 @@
     width: 1312px;
     gap: 464px;
   }
+
+  @include mobile {
+    width: 343px;
+  }
 }
 
 .logo_link {
@@ -24,7 +28,7 @@
     width: 213px;
   }
 
-  @include mobile-above {
+  @include mobile {
     font-size: 20px;
   }
 }

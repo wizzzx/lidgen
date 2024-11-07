@@ -5,6 +5,7 @@ import styles from "./index.module.scss";
 import Image from "next/image";
 import { Container } from "@/components/shared/Container";
 import { AccordionBlock } from "@/components/ui/AccordionBlock";
+import { useMediaQuery } from "react-responsive";
 
 const GuaranteeData = [
   {
@@ -40,7 +41,9 @@ const GuaranteeData = [
 ];
 
 export const GuaranteeBlock: React.FC = () => {
-  return (
+  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+
+  return !isMobile ? (
     <Container className={styles.container}>
       <h2 className={styles.section_header}>Займ на карту онлайн за 5 минут</h2>
       <div className={styles.section_container}>
@@ -55,6 +58,24 @@ export const GuaranteeBlock: React.FC = () => {
         <AccordionBlock
           data={GuaranteeData}
           className={styles.accordion_block}
+        />
+      </div>
+    </Container>
+  ) : (
+    <Container className={styles.container}>
+      <h2 className={styles.section_header}>Займ на карту онлайн за 5 минут</h2>
+      <div className={styles.section_container}>
+        <AccordionBlock
+          data={GuaranteeData}
+          className={styles.accordion_block}
+        />
+        <Image
+          src={"/assets/images/hands.svg"}
+          alt={"phone picture"}
+          width={864}
+          height={911}
+          loading={"lazy"}
+          className={styles.image}
         />
       </div>
     </Container>

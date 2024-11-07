@@ -18,6 +18,10 @@
         max-width: 640px;
         margin-right: 145px;
     }
+
+    @include mobile {
+        max-width: 360px;
+    }
 }
 
 .accordion_item_content {

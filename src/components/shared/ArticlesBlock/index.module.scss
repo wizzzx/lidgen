@@ -115,6 +115,10 @@
 .other_offers {
 position: relative;
   z-index: 1;
+
+  @include mobile {
+    padding-bottom: 65px;
+  }
 }
 
 .card_image {

@@ -33,7 +33,7 @@ const navigationButtons = [
 ];
 
 export const Header: React.FC = () => {
-  const isMobile = useMediaQuery({ query: "(max-width: 768px" });
+  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
 
   return (
     <header className={styles.header}>
@@ -51,7 +51,7 @@ export const Header: React.FC = () => {
           </ul>
         </nav>
       ) : (
-        <div></div>
+        <div>is mobile</div>
       )}
     </header>
   );

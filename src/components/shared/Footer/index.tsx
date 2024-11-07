@@ -5,6 +5,7 @@ import styles from "./index.module.scss";
 import cn from "classnames";
 import { Container } from "@/components/shared/Container";
 import Link from "next/link";
+import { useMediaQuery } from "react-responsive";
 
 const FooterNavigationData = [
   {
@@ -46,7 +47,9 @@ interface Props {
 }
 
 export const Footer: React.FC<Props> = ({ className }) => {
-  return (
+  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+
+  return !isMobile ? (
     <Container className={cn(styles.container, className)}>
       <div className={styles.footer_subcontainer_left}>
         <div className={styles.service}>
@@ -56,8 +59,11 @@ export const Footer: React.FC<Props> = ({ className }) => {
           Остались вопросы? Звоните:{" "}
           <span className={styles.telephone_number}>8 800 600 1776</span>
         </div>
-        <Link href={'/confidentiality_policy'} className={styles.confidentiality_policy}>
-            Политика конфиденциальности
+        <Link
+          href={"/confidentiality_policy"}
+          className={styles.confidentiality_policy}
+        >
+          Политика конфиденциальности
         </Link>
       </div>
       <div className={styles.footer_subcontainer_right}>
@@ -69,6 +75,34 @@ export const Footer: React.FC<Props> = ({ className }) => {
             </div>
           ))}
         </nav>
+      </div>
+    </Container>
+  ) : (
+    <Container className={cn(styles.container, className)}>
+      <div className={styles.footer_subcontainer_right}>
+        <div className={styles.menu}>Меню</div>
+        <nav className={styles.menu_items}>
+          {FooterNavigationData.map((item, index) => (
+            <div key={index} className={styles.menu_item}>
+              <Link href={item.route}>{item.title}</Link>
+            </div>
+          ))}
+        </nav>
+      </div>
+      <div className={styles.footer_subcontainer_left}>
+        <div className={styles.service}>
+          @ Сервис &laquo;Лидогенератор&raquo;, 2022
+        </div>
+        <div className={styles.telephone}>
+          Остались вопросы? Звоните:{" "}
+          <span className={styles.telephone_number}>8 800 600 1776</span>
+        </div>
+        <Link
+          href={"/confidentiality_policy"}
+          className={styles.confidentiality_policy}
+        >
+          Политика конфиденциальности
+        </Link>
       </div>
     </Container>
   );

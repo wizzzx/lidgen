@@ -6,6 +6,7 @@ import { Container } from "@/components/shared/Container";
 import { OtherOffersBlock } from "@/components/shared/OtherOffersBlock";
 import Image from "next/image";
 import Link from "next/link";
+import { useMediaQuery } from "react-responsive";
 
 const ArticlesData = [
   {
@@ -47,7 +48,9 @@ const ArticlesData = [
 ];
 
 export const ArticlesBlock: React.FC = () => {
-  return (
+  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+
+  return !isMobile ? (
     <Container className={styles.container}>
       <div className={styles.ellipse}></div>
       <div className={styles.white_ellipse}></div>
@@ -74,5 +77,7 @@ export const ArticlesBlock: React.FC = () => {
       </div>
       <OtherOffersBlock className={styles.other_offers} />
     </Container>
+  ) : (
+    <OtherOffersBlock className={styles.other_offers} />
   );
 };

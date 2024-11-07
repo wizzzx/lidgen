@@ -51,7 +51,7 @@ export const ReviewBlock: React.FC = () => {
             Поделитесь своим мнением о сервисе
           </p>
         </div>
-        <div className={styles.review_cards_container}>
+        <div className={styles.review_cards_c ontainer}>
           {ReviewData.map((item) => (
             <div key={item.id} className={styles.review_card}>
               <div className={styles.review_card_container}>
