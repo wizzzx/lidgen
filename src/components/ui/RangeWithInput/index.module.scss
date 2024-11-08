@@ -10,38 +10,42 @@
     flex-direction: column;
     gap: 24px;
   }
-}
 
-.input {
-  width: 235px;
-  height: 59px;
-  border-radius: 6px;
-  font-family: var(--font-montserrat);
-  font-size: 32px;
-  font-weight: 500;
-  border: transparent;
-  text-align: center;
+  .range_container {
 
-  @include mobile {
-    width: 343px;
-    height: 32px;
-    font-size: 14px;
+    .range_legend {
+      display: flex;
+      justify-content: space-between;
+      font-family: var(--font-nunito);
+      color: #3E5174;
+      font-size: 22px;
+      font-weight: 500;
+
+      @include mobile {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .input {
+    width: 235px;
+    height: 59px;
+    border-radius: 6px;
+    font-family: var(--font-montserrat);
+    font-size: 32px;
+    font-weight: 500;
+    border: transparent;
+    text-align: center;
+
+    @include mobile {
+      width: 343px;
+      height: 32px;
+      font-size: 14px;
+    }
   }
 }
 
-.range_container {
 
-}
 
-.range_legend {
-  display: flex;
-  justify-content: space-between;
-  font-family: var(--font-nunito);
-  color: #3E5174;
-  font-size: 22px;
-  font-weight: 500;
 
-  @include mobile {
-    font-size: 12px;
-  }
-}
+

@@ -3,87 +3,90 @@
 .container {
   display: flex;
   flex-direction: column;
-}
 
-.slider_container {
-  display: flex;
-  flex-direction: column;
-  gap: 53px;
-  margin: 104px auto 72px;
-}
-
-.button_container {
-  display: flex;
-  flex-direction: column;
-  width: 1069px;
-  height: 140px;
-  gap: 16px;
-
-  @include mobile {
-    width: 343px;
+  .slider_container {
+    display: flex;
+    flex-direction: column;
+    gap: 53px;
+    margin: 104px auto 72px;
   }
-}
 
-.button_container_text {
-  font-family: var(--font-nunito);
-  font-size: 23px;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 24px;
+  .button_container {
+    display: flex;
+    flex-direction: column;
+    width: 1069px;
+    height: 140px;
+    gap: 16px;
 
-  @include mobile {
-    font-size: 14px;
+    @include mobile {
+      width: 343px;
+    }
+
+    .button_container_text {
+      font-family: var(--font-nunito);
+      font-size: 23px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+
+      @include mobile {
+        font-size: 14px;
+      }
+
+      .bold {
+        font-weight: 700;
+      }
+
+      .struck {
+        text-decoration: line-through ;
+      }
+
+      .payment_final {
+        font-weight: 700;
+        font-size: 28px;
+        padding-left: 15px;
+
+        @include mobile {
+          font-size: 20px;
+        }
+      }
+
+      .button {
+        width: 1068px;
+        height: 86px;
+        border-radius: 12px;
+        background: #0066FF;
+        color: #FFFFFF;
+        font-family: var(--font-inter);
+        font-size: 32px;
+        font-weight: 500;
+
+        @include mobile {
+          width: 343px;
+          height: 57px;
+          border-radius: 6px;
+          font-size: 20px;
+        }
+      }
+    }
   }
+
+
 }
 
-.bold {
-  font-weight: 700;
-}
 
-.struck {
-  text-decoration: line-through ;
-}
 
-.payment_final {
-  font-weight: 700;
-  font-size: 28px;
-  padding-left: 15px;
 
-  @include mobile {
-    font-size: 20px;
-  }
-}
 
-.button {
-  width: 1068px;
-  height: 86px;
-  border-radius: 12px;
-  background: #0066FF;
-  color: #FFFFFF;
-  font-family: var(--font-inter);
-  font-size: 32px;
-  font-weight: 500;
 
-  @include mobile {
-    width: 343px;
-    height: 57px;
-    border-radius: 6px;
-    font-size: 20px;
-  }
-}
 
-.dot {
-  background-color: #0066FF;
-  border-radius: 100%;
-  height: 16px;
-  width: 16px;
 
-  @include mobile {
-    display: none;
-  }
-}
+
+
+
+
 
 
 

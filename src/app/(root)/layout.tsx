@@ -2,6 +2,8 @@ import { Metadata } from "next";
 import { SITE_NAME } from "@/constants/seo.constants";
 import ContainerLayout from "../../components/shared/ContainerLayout";
 import React from "react";
+import { Header } from "@/components/ui/Header";
+import { Footer } from "@/components/shared/Footer";
 
 export const metadata: Metadata = {
   title: {
@@ -16,7 +18,11 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <>
-      <ContainerLayout>{children}</ContainerLayout>
+      <ContainerLayout>
+        <Header />
+        {children}
+      </ContainerLayout>
+      <Footer />
     </>
   );
 }

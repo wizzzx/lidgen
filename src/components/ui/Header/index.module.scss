@@ -3,48 +3,40 @@
 .header {
   display: flex;
   align-items: center;
-  max-width: 1595px;
+  max-width: 90%;
   width: 100%;
   margin: 24px auto;
   justify-content: space-between;
+  background: transparent;
 
-  //@include desktop {
-  //  width: 1312px;
-  //  gap: 464px;
-  //}
-  //
-  //@include mobile {
-  //  width: 343px;
-  //}
-}
+  .logo_link {
+    font-size: 24px;
+    font-family: var(--font-cera);
+    font-weight: 700;
+    line-height: 30px;
 
-.logo_link {
-  font-size: 24px;
-  font-family: var(--font-cera);
-  font-weight: 700;
-  line-height: 30px;
-
-  @include desktop {
-    width: 213px;
   }
 
-  @include mobile {
-    font-size: 20px;
+  .highlight_logo {
+    color: #007AFF;
   }
+
+  .nav_buttons {
+    font-family: var(--font-nunito);
+    font-weight: 500;
+    display: flex;
+    gap: 32px;
+    font-size: 16px;
+    width: 635px;
+  }
+
 }
 
-.nav_buttons {
-  font-family: var(--font-nunito);
-  font-weight: 500;
-  display: flex;
-  gap: 32px;
-  font-size: 16px;
-  width: 635px;
-}
 
-.highlight_logo {
-  color: #007AFF;
-}
+
+
+
+
 
 
 

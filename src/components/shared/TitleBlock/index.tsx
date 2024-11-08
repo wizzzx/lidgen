@@ -3,7 +3,6 @@
 import React from "react";
 import styles from "./index.module.scss";
 import { Container } from "@/components/shared/Container";
-import { Header } from "@/components/ui/Header";
 import { BlockTitle } from "@/components/ui/BlockTitle";
 import { SmartForm } from "@/components/hocs/SmartForm";
 import { useForm } from "react-hook-form";
@@ -17,7 +16,6 @@ export const TitleBlock: React.FC = () => {
   return (
     <Container className={styles.container}>
       <div className={styles.ellipse}></div>
-      <Header />
       <div className={styles.slider_block_container}>
         <BlockTitle
           className={styles.title_main}
