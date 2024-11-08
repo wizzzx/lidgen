@@ -9,7 +9,7 @@
 .track_container {
   height: 36px;
   display: flex;
-  width: 796px;
+  width: 100%;
 
   @include mobile {
     width: 343px;
