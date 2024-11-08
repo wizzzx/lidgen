@@ -2,7 +2,6 @@
 
 import React from "react";
 import styles from "./index.module.scss";
-import { BlockTitle } from "@/components/ui/BlockTitle";
 import { Container } from "@/components/shared/Container";
 import Image from "next/image";
 import { StepList } from "@/components/ui/StepList";

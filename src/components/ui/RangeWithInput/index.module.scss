@@ -4,6 +4,8 @@
   display: flex;
   align-content: center;
   align-items: center;
+  justify-content: space-between;
+
   gap: 38px;
 
   @include mobile {
@@ -12,6 +14,7 @@
   }
 
   .range_container {
+    flex: 1 1;
 
     .range_legend {
       display: flex;

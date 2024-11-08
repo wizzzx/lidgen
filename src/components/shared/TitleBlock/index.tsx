@@ -15,7 +15,7 @@ export const TitleBlock: React.FC = () => {
 
   return (
     <Container className={styles.container}>
-      <div className={styles.ellipse}></div>
+      {/*<div className={styles.ellipse}></div>*/}
       <div className={styles.slider_block_container}>
         <BlockTitle
           className={styles.title_main}

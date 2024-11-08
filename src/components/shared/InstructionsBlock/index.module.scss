@@ -8,28 +8,33 @@
   background: linear-gradient(51.01deg, #88AFF4 -4.29%, #628DD9 80.67%);
   background-size: auto 1011px;
   padding-bottom: 154px;
-}
 
-.title_text {
-  font-size: 64px;
-  font-weight: 500;
-  line-height: 80px;
-  text-align: center;
-  color: #FFFFFF;
-}
+  .title_text {
+    font-size: 64px;
+    font-weight: 500;
+    line-height: 80px;
+    text-align: center;
+    color: #FFFFFF;
+  }
 
-.sub_container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 181px;
+  .sub_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 181px;
 
-  @include mobile {
-    flex-direction: column;
+    @include mobile {
+      flex-direction: column;
+    }
+
+    .image {
+      filter: drop-shadow(0px 50px 25px rgba(0,0,0,0.3));
+    }
   }
 }
 
-.image {
-  filter: drop-shadow(0px 50px 25px rgba(0,0,0,0.3));
-}
+
+
+
+
 
