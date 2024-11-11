@@ -12,7 +12,7 @@ export const InstructionsBlock: React.FC = () => {
       <div className={styles.title_text}>
         Как получить займ онлайн на карту?
       </div>
-      <Container className={styles.sub_container}>
+      <div className={styles.sub_container}>
         <Image
           src="/assets/images/3034.svg"
           alt="loan calculator on mobile screen"
@@ -28,7 +28,7 @@ export const InstructionsBlock: React.FC = () => {
             "Получите деньги",
           ]}
         />
-      </Container>
+      </div>
     </Container>
   );
 };

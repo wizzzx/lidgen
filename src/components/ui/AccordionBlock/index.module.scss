@@ -11,16 +11,16 @@
   font-size: 36px;
   padding: 36px 0;
   border-bottom: 1px solid #AEA5A5;
-  width: 796px;
+  max-width: 796px;
+  width: 100%;
   cursor: pointer;
 
     @include desktop {
-        max-width: 640px;
-        margin-right: 145px;
+
     }
 
     @include mobile {
-        max-width: 360px;
+
     }
 }
 

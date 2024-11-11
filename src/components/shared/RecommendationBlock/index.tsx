@@ -80,9 +80,7 @@ export const RecommendationBlock: React.FC = () => {
         label={"Получить займ за 5 минут"}
         className={styles.big_button}
       />
-      <div className={styles.review_block_container}>
-        <ReviewBlock />
-      </div>
+      <ReviewBlock />
     </Container>
   );
 };

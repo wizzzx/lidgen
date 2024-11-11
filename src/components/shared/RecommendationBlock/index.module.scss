@@ -14,27 +14,30 @@
   font-size: 64px;
   text-align: left;
   margin-bottom: 124px;
-  width: 1616px;
+  max-width: 1616px;
+  width: 100%;
 
   @include desktop {
-    max-width: 1308px;
+
   }
 
   @include mobile {
-    font-size: 32px;
-    width: 343px;
-    height: 76px;
+
   }
 }
 
 .recommendations_container {
   display: flex;
-  flex-direction: row;
-  gap: 146px;
+  justify-content: space-between;
+  max-width: 1606px;
+  width: 100%;
   align-content: space-between;
+  flex-wrap: wrap;
+  padding-left: 20px;
+  padding-right: 20px;
   
   @include desktop {
-    gap: 48px;
+
   }
 
   @include mobile {
@@ -55,7 +58,8 @@
   font-family: var(--font-cera);
   font-weight: 400;
   font-size: 18px;
-  width: 292px;
+  max-width: 292px;
+
 
   @include mobile {
     font-size: 18px;
@@ -82,8 +86,8 @@
 
   @include mobile {
     padding: 18px 179px 15px 63px;
-    width: 374px;
     height: 92px;
+    width: 374px;
   }
 }
 

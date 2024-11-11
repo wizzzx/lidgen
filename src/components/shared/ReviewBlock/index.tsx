@@ -44,13 +44,13 @@ const ReviewData = [
 export const ReviewBlock: React.FC = () => {
   return (
     <Container className={styles.container}>
+      <div className={styles.review_subcontainer}>
+        <h3 className={styles.section_header}>Отзывы наших клиентов</h3>
+        <p className={styles.section_subheader}>
+          Поделитесь своим мнением о сервисе
+        </p>
+      </div>
       <div className={styles.review_container}>
-        <div className={styles.review_subcontainer}>
-          <h3 className={styles.section_header}>Отзывы наших клиентов</h3>
-          <p className={styles.section_subheader}>
-            Поделитесь своим мнением о сервисе
-          </p>
-        </div>
         <div className={styles.review_cards_container}>
           {ReviewData.map((item) => (
             <div key={item.id} className={styles.review_card}>
@@ -83,8 +83,8 @@ export const ReviewBlock: React.FC = () => {
             </Link>
           </div>
         </div>
+        <ReviewForm className={styles.review_form_container} />
       </div>
-      <ReviewForm className={styles.review_form_container} />
     </Container>
   );
 };

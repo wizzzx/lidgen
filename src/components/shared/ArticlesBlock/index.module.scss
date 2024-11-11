@@ -8,14 +8,14 @@
 
 .articles_container {
   display: flex;
-  width: 1563px;
-  height: 687px;
+  max-width: 1566px;
+  width: 100%;
   align-content: center;
-  gap: 69px;
   padding-top: 174px;
   margin: auto auto 241px;
   z-index: 2;
   position: relative;
+  justify-content: space-between;
 
   @include desktop {
     max-width: 1312px;

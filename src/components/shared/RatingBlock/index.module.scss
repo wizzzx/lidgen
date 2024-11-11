@@ -4,25 +4,28 @@
   display: flex;
   flex-direction: column;
   padding-top: 99px;
+  max-width: 1609px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
 }
 
 .rating_container {
   display: flex;
-  flex-wrap: nowrap;
   justify-content: space-between;
   padding-bottom: 34px;
   border-bottom: 1px solid #D2D2D2;
   padding-top: 48px;
-  width: 1609px;
+  width: 100%;
+  max-width: 1609px;
   margin: auto;
 
   @include desktop {
-    max-width: 1308px;
+
   }
 
   @include mobile {
-    flex-direction: column;
-    max-width: 343px;
+
   }
 }
 
@@ -50,17 +53,18 @@
   gap: 36px;
 
   @include desktop {
-    gap: 29px;
+
   }
 
   @include mobile {
-    flex-direction: column;
+
   }
 }
 
 .rating_button {
-   width: 439px;
-   height: 78px;
+  max-width: 439px;
+  height: 78px;
+  width: 100%;
   background-color: #0066FF;
   border-radius: 12px;
   font-family: var(--font-sfpro);
@@ -71,16 +75,13 @@
   gap: 17px;
 
   @include desktop {
-    width: 352px;
-    font-size: 24px;
-    font-weight: 600;
-    padding: 15px 27px;
+
   }
 }
 
 .rating_number {
   color: rgba(0, 102, 255, 1);
-;
+
 }
 
 .underlined {

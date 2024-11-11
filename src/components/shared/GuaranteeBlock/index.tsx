@@ -43,7 +43,7 @@ const GuaranteeData = [
 export const GuaranteeBlock: React.FC = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
 
-  return !isMobile ? (
+  return (
     <Container className={styles.container}>
       <h2 className={styles.section_header}>Займ на карту онлайн за 5 минут</h2>
       <div className={styles.section_container}>
@@ -58,24 +58,6 @@ export const GuaranteeBlock: React.FC = () => {
         <AccordionBlock
           data={GuaranteeData}
           className={styles.accordion_block}
-        />
-      </div>
-    </Container>
-  ) : (
-    <Container className={styles.container}>
-      <h2 className={styles.section_header}>Займ на карту онлайн за 5 минут</h2>
-      <div className={styles.section_container}>
-        <AccordionBlock
-          data={GuaranteeData}
-          className={styles.accordion_block}
-        />
-        <Image
-          src={"/assets/images/hands.svg"}
-          alt={"phone picture"}
-          width={864}
-          height={911}
-          loading={"lazy"}
-          className={styles.image}
         />
       </div>
     </Container>

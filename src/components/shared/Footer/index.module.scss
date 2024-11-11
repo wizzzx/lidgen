@@ -2,13 +2,16 @@
 
 .container {
   display: flex;
-  padding: 50px 320px 35px 168px;
-  gap: 440px;
+  margin: auto;
+  padding-top: 50px;
+  padding-bottom: 35px;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  max-width: 1432px;
+  width: 100%;
 
   @include desktop {
-    gap: 147px;
+
   }
 
   @include mobile {
@@ -36,6 +39,8 @@
   flex-wrap: wrap;
   column-gap: 60px;
   row-gap: 37px;
+  max-width: 630px;
+  width: 100%;
 }
 
 .menu {

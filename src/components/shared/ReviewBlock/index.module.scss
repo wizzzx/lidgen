@@ -2,17 +2,17 @@
 
 .container {
   display: flex;
-  width: 1476px;
-  gap: 156px;
+  flex-direction: column;
+  max-width: 1476px;
+  width: 100%;
+  gap: 81px;
   margin: 106px auto 103px;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
+  justify-content: space-between;
+  align-content: space-between;
+  align-items: flex-start;
 
   @include desktop {
-    gap: 148px;
-    width: 1312px;
-    height: 763px;
+
   }
 
   @include mobile {
@@ -22,7 +22,7 @@
 
 .review_container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 60px;
   position: relative;
 }

@@ -6,6 +6,7 @@ import { Container } from "@/components/shared/Container";
 import { OtherOffersBlock } from "@/components/shared/OtherOffersBlock";
 import Image from "next/image";
 import Link from "next/link";
+import cn from "classnames";
 import { useMediaQuery } from "react-responsive";
 
 const ArticlesData = [
@@ -50,11 +51,11 @@ const ArticlesData = [
 export const ArticlesBlock: React.FC = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
 
-  return !isMobile ? (
+  return (
     <Container className={styles.container}>
       <div className={styles.ellipse}></div>
-      <div className={styles.white_ellipse}></div>
-      <div className={styles.articles_container}>
+      {/*<div className={styles.white_ellipse}></div>*/}
+      <div className={cn(styles.articles_container, "hidden-tablets")}>
         {ArticlesData.map((item) => (
           <div key={item.id} className={styles.card_container}>
             <Image
@@ -77,7 +78,5 @@ export const ArticlesBlock: React.FC = () => {
       </div>
       <OtherOffersBlock className={styles.other_offers} />
     </Container>
-  ) : (
-    <OtherOffersBlock className={styles.other_offers} />
   );
 };

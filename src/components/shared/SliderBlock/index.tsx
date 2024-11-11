@@ -17,11 +17,13 @@ export const SliderBlock: React.FC<Props> = ({ className }) => {
   const amount: number = useWatch({
     control,
     name: "loan_data.amount",
+    defaultValue: 50000,
   });
 
   const term: number = useWatch({
     control,
     name: "loan_data.term",
+    defaultValue: 1,
   });
 
   const percent = 4;
