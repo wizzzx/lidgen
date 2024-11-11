@@ -34,7 +34,7 @@ const StepData = [
 
 export const StepList: React.FC<Props> = ({ className, texts = [] }) => {
   return (
-    <Container className={cn(styles.container, className)}>
+    <div className={cn(styles.container, className)}>
       {StepData.map((item, index) => (
         <div key={index} className={styles.step_container}>
           <Image
@@ -46,6 +46,6 @@ export const StepList: React.FC<Props> = ({ className, texts = [] }) => {
           {texts[index] && <p className={styles.step_text}>{texts[index]}</p>}
         </div>
       ))}
-    </Container>
+    </div>
   );
 };

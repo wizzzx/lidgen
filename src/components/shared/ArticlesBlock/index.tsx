@@ -7,7 +7,6 @@ import { OtherOffersBlock } from "@/components/shared/OtherOffersBlock";
 import Image from "next/image";
 import Link from "next/link";
 import cn from "classnames";
-import { useMediaQuery } from "react-responsive";
 
 const ArticlesData = [
   {
@@ -49,12 +48,9 @@ const ArticlesData = [
 ];
 
 export const ArticlesBlock: React.FC = () => {
-  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
-
   return (
     <Container className={styles.container}>
       <div className={styles.ellipse}></div>
-      {/*<div className={styles.white_ellipse}></div>*/}
       <div className={cn(styles.articles_container, "hidden-tablets")}>
         {ArticlesData.map((item) => (
           <div key={item.id} className={styles.card_container}>

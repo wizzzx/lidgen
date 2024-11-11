@@ -1,16 +1,21 @@
-.step_container {
-  display: flex;
-  align-items: center;
-  gap: 22px;
-  color: white;
-  font-size: 37px;
-  font-weight: 500;
-  line-height: 37px;
-}
+@import '/public/assets/styles/media';
 
 .container {
   display: flex;
   flex-direction: column;
   gap: 53px;
+
+  @include mobile {
+
+  }
+
+  .step_container {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    color: white;
+    font-size: 37px;
+    font-weight: 500;
+  }
 }
 

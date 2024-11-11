@@ -4,126 +4,125 @@
   background: #F9F9F9;
   position: relative;
   z-index: 0;
-}
 
-.articles_container {
-  display: flex;
-  max-width: 1566px;
-  width: 100%;
-  align-content: center;
-  padding-top: 174px;
-  margin: auto auto 241px;
-  z-index: 2;
-  position: relative;
-  justify-content: space-between;
-
-  @include desktop {
-    max-width: 1312px;
-    gap: 32px;
-    margin: auto auto 40px;
-    padding-top: 72px;
-  }
-}
-
-.card_container {
-  background: #F4F4F6;
-  border: 8px solid white;
-  border-radius: 24px;
-  width: 339px;
-  height: 632px;
-  position: relative;
-  filter: drop-shadow(0px 50px 25px rgba(0,0,0,0.3));
+  .ellipse {
+    position: absolute;
+    width: 1237px;
+    height: 1237px;
+    top: 253px;
+    left: -373px;
+    background: #DAE2FE;
+    border-radius: 100%;
+    filter: blur(331px);
+    z-index: 0;
     @include desktop {
-      max-height: 540px;
+      display: none;
     }
-}
+  }
 
-.text_part {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  width: 270px;
-  height: 238px;
-  margin: 25px auto 45px;
-  line-height: 23px;
-}
+  .articles_container {
+    display: flex;
+    max-width: 1566px;
+    width: 100%;
+    align-content: center;
+    padding-top: 174px;
+    margin: auto auto 241px;
+    z-index: 2;
+    position: relative;
+    justify-content: space-between;
 
-.article_header {
-  font-family: var(--font-cera);
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 30px;
+    @include desktop {
+      max-width: 1312px;
+      gap: 32px;
+      margin: auto auto 40px;
+      padding-top: 72px;
+    }
 
-  @include desktop {
-    font-size: 20px;
+    .card_container {
+      background: #F4F4F6;
+      border: 8px solid white;
+      border-radius: 24px;
+      width: 339px;
+      height: 632px;
+      position: relative;
+      filter: drop-shadow(0px 50px 25px rgba(0,0,0,0.3));
+      @include desktop {
+        max-height: 540px;
+      }
+      .card_image {
+        @include desktop {
+          width: 292px;
+          height: 214px;
+        }
+      }
+
+      .text_part {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 270px;
+        height: 238px;
+        margin: 25px auto 45px;
+        line-height: 23px;
+
+        .article_header {
+          font-family: var(--font-cera);
+          font-weight: 500;
+          font-size: 24px;
+          line-height: 30px;
+
+          @include desktop {
+            font-size: 20px;
+          }
+        }
+
+        .article_content {
+          font-family: var(--font-cera);
+          font-weight: 400;
+          font-size: 18px;
+
+          @include desktop {
+            font-size: 16px;
+          }
+        }
+      }
+      .link {
+        font-family: var(--font-cera);
+        font-weight: 400;
+        font-size: 16px;
+        color: #0387FF;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+        position: absolute;
+        right: 29px;
+        bottom: 29px;
+      }
+
+    }
+  }
+  .other_offers {
+    position: relative;
+    z-index: 1;
+
+    @include mobile {
+      padding-bottom: 65px;
+    }
   }
 }
 
-.article_content {
-  font-family: var(--font-cera);
-  font-weight: 400;
-  font-size: 18px;
 
-  @include desktop {
-    font-size: 16px;
-  }
-}
 
-.link {
-  font-family: var(--font-cera);
-  font-weight: 400;
-  font-size: 16px;
-  color: #0387FF;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  position: absolute;
-  right: 29px;
-  bottom: 29px;
 
-}
 
-.ellipse {
-  position: absolute;
-  width: 1237px;
-  height: 1237px;
-  top: 253px;
-  left: -373px;
-  background: #DAE2FE;
-  border-radius: 100%;
-  filter: blur(331px);
-  z-index: 0;
-  @include desktop {
-    display: none;
-  }
-}
 
-.white_ellipse {
-  background: #FFFFFF;
-  position: absolute;
-  width: 985px;
-  height: 985px;
-  top: -632px;
-  left: 1249px;
-  border-radius: 100%;
-  filter: blur(331px);
-  z-index: 0;
-  @include desktop {
-    display: none;
-  }
-}
 
-.other_offers {
-position: relative;
-  z-index: 1;
 
-  @include mobile {
-    padding-bottom: 65px;
-  }
-}
 
-.card_image {
-  @include desktop {
-    width: 292px;
-    height: 214px;
-  }
-}
+
+
+
+
+
+
+
+

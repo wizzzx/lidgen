@@ -5,7 +5,6 @@ import styles from "./index.module.scss";
 import Image from "next/image";
 import { Container } from "@/components/shared/Container";
 import { AccordionBlock } from "@/components/ui/AccordionBlock";
-import { useMediaQuery } from "react-responsive";
 
 const GuaranteeData = [
   {
@@ -41,8 +40,6 @@ const GuaranteeData = [
 ];
 
 export const GuaranteeBlock: React.FC = () => {
-  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
-
   return (
     <Container className={styles.container}>
       <h2 className={styles.section_header}>Займ на карту онлайн за 5 минут</h2>

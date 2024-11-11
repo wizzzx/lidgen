@@ -9,78 +9,91 @@
   justify-content: space-between;
   max-width: 1432px;
   width: 100%;
-
   @include desktop {
-
   }
-
   @include mobile {
     flex-direction: column;
     margin-top: 150px;
   }
-}
 
-.footer_subcontainer_left {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  white-space: nowrap;
-}
+  .footer_subcontainer_left {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    white-space: nowrap;
 
-.footer_subcontainer_right {
+    .service {
+      font-family: var(--font-sfpro);
+      font-weight: 500;
+      font-size: 16px;
+    }
+
+    .telephone {
+      font-family: var(--font-sfpro);
+      font-weight: 500;
+      font-size: 16px;
+
+      .telephone_number {
+        font-weight: 700;
+      }
+    }
+
+    .confidentiality_policy {
+      font-family: var(--font-sfpro);
+      font-weight: 500;
+      font-size: 16px;
+      color: #002BC2;
+      text-decoration: underline;
+      text-decoration-skip-ink: none;
+      text-underline-offset: 2px;
+    }
+  }
+
+  .footer_subcontainer_right {
     @include desktop {
       max-width: 630px;
     }
+
+    .menu {
+      font-family: var(--font-sfpro);
+      font-weight: 700;
+      font-size: 18px;
+      letter-spacing: 0.25px;
+      margin-bottom: 33px;
+    }
+
+    .menu_items {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      column-gap: 60px;
+      row-gap: 37px;
+      max-width: 630px;
+      width: 100%;
+
+      .menu_item {
+        font-family: var(--font-sfpro);
+        font-weight: 500;
+        font-size: 16px;
+        letter-spacing: 0.25px;
+      }
+    }
+  }
 }
 
-.menu_items {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  column-gap: 60px;
-  row-gap: 37px;
-  max-width: 630px;
-  width: 100%;
-}
 
-.menu {
-  font-family: var(--font-sfpro);
-  font-weight: 700;
-  font-size: 18px;
-  letter-spacing: 0.25px;
-  margin-bottom: 33px;
-}
 
-.menu_item {
-  font-family: var(--font-sfpro);
-  font-weight: 500;
-  font-size: 16px;
-  letter-spacing: 0.25px;
-}
 
-.service {
-  font-family: var(--font-sfpro);
-  font-weight: 500;
-  font-size: 16px;
-}
 
-.telephone {
-  font-family: var(--font-sfpro);
-  font-weight: 500;
-  font-size: 16px;
-}
 
-.telephone_number {
-  font-weight: 700;
-}
 
-.confidentiality_policy {
-  font-family: var(--font-sfpro);
-  font-weight: 500;
-  font-size: 16px;
-  color: #002BC2;
-  text-decoration: underline;
-  text-decoration-skip-ink: none;
-  text-underline-offset: 2px;
-}
+
+
+
+
+
+
+
+
+
 
