@@ -57,7 +57,7 @@ export const SliderBlock: React.FC<Props> = ({ className }) => {
       <div className={styles.button_container}>
         <div className={styles.button_container_text}>
           <p>
-            Вы берете <span className={styles.bold}>{amount} до 5 апреля </span>
+            Вы берете <span className={styles.bold}>{amount} до 5 апреля</span>
             (включительно) 23:59{" "}
           </p>
           <div className={styles.dot}></div>

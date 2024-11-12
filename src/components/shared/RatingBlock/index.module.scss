@@ -21,7 +21,7 @@
   margin: auto;
 
   @include desktop {
-
+    max-width: 1300px;
   }
 
   @include mobile {

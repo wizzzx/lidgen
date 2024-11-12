@@ -5,11 +5,12 @@ import styles from "./index.module.scss";
 import { Container } from "@/components/shared/Container";
 import Image from "next/image";
 import { StepList } from "@/components/ui/StepList";
+import cn from "classnames";
 
 export const InstructionsBlock: React.FC = () => {
   return (
     <Container className={styles.container}>
-      <div className={styles.title_text}>
+      <div className={cn(styles.title_text, "visible-desktop")}>
         Как получить займ онлайн на карту?
       </div>
       <div className={styles.sub_container}>
@@ -21,13 +22,18 @@ export const InstructionsBlock: React.FC = () => {
           className={styles.image}
           loading={"lazy"}
         />
-        <StepList
-          texts={[
-            "Заполните короткую анкету",
-            "Примите предложение кредитора",
-            "Получите деньги",
-          ]}
-        />
+        <div>
+          <div className={cn(styles.title_text, "hidden-desktop")}>
+            Как получить займ онлайн на карту?
+          </div>
+          <StepList
+            texts={[
+              "Заполните короткую анкету",
+              "Примите предложение кредитора",
+              "Получите деньги",
+            ]}
+          />
+        </div>
       </div>
     </Container>
   );

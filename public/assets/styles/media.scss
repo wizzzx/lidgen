@@ -87,6 +87,18 @@ $mobile: 374px;
   }
 }
 
+.hidden-desktop {
+  @include desktop-above {
+    display: none !important;
+  }
+}
+
+.visible-desktop {
+  @include desktop {
+    display: none !important;
+  }
+}
+
 .hidden-tablets {
   @include tablets {
     display: none !important;

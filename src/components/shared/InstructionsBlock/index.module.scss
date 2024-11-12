@@ -16,6 +16,14 @@
     text-align: center;
     color: #FFFFFF;
     padding-top: 37px;
+
+    @include desktop {
+      max-width: 603px;
+      width: 100%;
+      font-size: 48px;
+      text-align: left;
+      margin-bottom: 72px;
+    }
   }
 
   .sub_container {

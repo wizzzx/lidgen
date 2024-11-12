@@ -3,6 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import styles from "./index.module.scss";
+import { DropDownMenu } from "@/components/ui/DropDownMenu";
 
 const navigationButtons = [
   {
@@ -48,7 +49,9 @@ export const Header: React.FC = () => {
         </ul>
       </nav>
 
-      <div className={"visible-tablets"}>is mobile</div>
+      <div className={"visible-tablets"}>
+        <DropDownMenu data={navigationButtons} />
+      </div>
     </header>
   );
 };

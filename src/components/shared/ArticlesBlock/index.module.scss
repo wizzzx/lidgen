@@ -103,6 +103,7 @@
   .other_offers {
     position: relative;
     z-index: 1;
+    padding-top: 60px;
 
     @include mobile {
       padding-bottom: 65px;

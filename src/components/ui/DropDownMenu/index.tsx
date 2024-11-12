@@ -45,7 +45,19 @@ export const DropDownMenu: React.FC<Props> = ({ data, className }) => {
           height={12}
         />
       </button>
-      {isOpen ? <div className={styles.menu_container}></div> : <div></div>}
+      {isOpen ? (
+        <div className={styles.menu_container}>
+          {data.map((item, index) => (
+            <DropDownMenuItem
+              title={item.title}
+              route={item.route}
+              key={index}
+            />
+          ))}
+        </div>
+      ) : (
+        <div></div>
+      )}
     </div>
   );
 };

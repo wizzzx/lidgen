@@ -5,12 +5,13 @@
   align-content: center;
   align-items: center;
   justify-content: space-between;
-
+  width: 100%;
   gap: 38px;
 
   @include mobile {
     flex-direction: column;
     gap: 24px;
+    max-width: 343px;
   }
 
   .range_container {
@@ -26,6 +27,7 @@
 
       @include mobile {
         font-size: 12px;
+        padding-bottom: 10px;
       }
     }
   }
@@ -39,9 +41,10 @@
     font-weight: 500;
     border: transparent;
     text-align: center;
+    outline-color: rgba(64, 101, 246, 1);
 
     @include mobile {
-      width: 343px;
+      min-width: 343px;
       height: 32px;
       font-size: 14px;
     }

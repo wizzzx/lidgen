@@ -2,15 +2,12 @@
 
 .main_title {
   font-weight: 700;
-  line-height: 146px;
-  text-align: center;
   white-space: nowrap;
 }
 
 .subtitle {
   font-size: 58px;
   font-weight: 600;
-  line-height: 71px;
   text-align: left;
 
   @include mobile {

@@ -20,10 +20,10 @@ export const TitleBlock: React.FC = () => {
           className={styles.title_main}
           title={"ЗАЙМ НА КАРТУ"}
           subtitle={
-            <>
+            <div className={styles.subtitle}>
               онлайн в {""}
               <span className={styles.highlighted_word}>Екатеринбурге</span>
-            </>
+            </div>
           }
         />
         <SmartForm submit={() => console.log} form={form}>
