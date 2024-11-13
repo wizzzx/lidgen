@@ -14,8 +14,7 @@
   }
 
   @include mobile {
-    width: 346px;
-    height: 639px;
+    max-width: 346px;
   }
 }
 
@@ -24,6 +23,10 @@
   font-size: 48px;
   font-weight: 500;
   text-align: center;
+
+  @include mobile {
+    font-size: 32px;
+  }
 }
 
 .offers_container {
@@ -40,6 +43,7 @@
     align-items: flex-start;
     align-content: flex-start;
     justify-content: flex-start;
+    gap: 18px;
   }
 }
 
@@ -52,17 +56,24 @@
   border-radius: 36px;
   background-color: #0066FF;
   color: white;
+
+  @include mobile {
+    font-size: 18px;
+    font-weight: 400;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
 }
 
-.item:nth-child(1) {grid-area: item1; width: 222px; }
-.item:nth-child(2) {grid-area: item2; width: 435px; }
-.item:nth-child(3) {grid-area: item3; width: 340px; }
-.item:nth-child(4) {grid-area: item4; width: 310px; margin-left: 10px; @include mobile {margin-left: 0}}
-.item:nth-child(5) {grid-area: item5; width: 342px; margin-left: 96px; @include mobile {margin-left: 0}}
-.item:nth-child(6) {grid-area: item6; width: 337px; }
-.item:nth-child(7) {grid-area: item7; width: 480px; margin-left: 20px; @include mobile {margin-left: 0}}
-.item:nth-child(8) {grid-area: item8; width: 248px; margin-left: 275px; @include mobile {margin-left: 0}}
-.item:nth-child(9) {grid-area: item9; width: 233px; margin-left: 90px; @include mobile {margin-left: 0}}
+.item:nth-child(1) {grid-area: item1; width: 222px; @include mobile {width: 138px}}
+.item:nth-child(2) {grid-area: item2; width: 435px; @include mobile {width: 309px}}
+.item:nth-child(3) {grid-area: item3; width: 340px; @include mobile {width: 238px}}
+.item:nth-child(4) {grid-area: item4; width: 310px; margin-left: 10px; @include mobile {margin-left: 0; width: 214px}}
+.item:nth-child(5) {grid-area: item5; width: 342px; margin-left: 96px; @include mobile {margin-left: 0; width: 237px}}
+.item:nth-child(6) {grid-area: item6; width: 337px; @include mobile {width: 237px}}
+.item:nth-child(7) {grid-area: item7; width: 480px; margin-left: 20px; @include mobile {margin-left: 0; width: 343px}}
+.item:nth-child(8) {grid-area: item8; width: 248px; margin-left: 275px; @include mobile {margin-left: 0; width: 165px}}
+.item:nth-child(9) {grid-area: item9; width: 233px; margin-left: 90px; @include mobile {margin-left: 0; width: 153px}}
 
 .item:nth-child(even) {
   background-color: #3E5174;

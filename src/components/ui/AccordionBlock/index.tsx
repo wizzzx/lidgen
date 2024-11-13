@@ -39,7 +39,7 @@ const AccordionItem: React.FC<AccordionBlockProps> = ({
       )}
       onClick={toggleAccordion}
     >
-      <h3>{title}</h3>
+      <h3 className={styles.title}>{title}</h3>
       {!isOpen && (
         <Image
           src={"/assets/icons/ui/accordion_arrow.svg"}

@@ -5,6 +5,7 @@ import styles from "./index.module.scss";
 import Image from "next/image";
 import { Container } from "@/components/shared/Container";
 import { AccordionBlock } from "@/components/ui/AccordionBlock";
+import cn from "classnames";
 
 const GuaranteeData = [
   {
@@ -43,7 +44,7 @@ export const GuaranteeBlock: React.FC = () => {
   return (
     <Container className={styles.container}>
       <h2 className={styles.section_header}>Займ на карту онлайн за 5 минут</h2>
-      <div className={styles.section_container}>
+      <div className={cn(styles.section_container, "hidden-mobile")}>
         <Image
           src={"/assets/images/hands.svg"}
           alt={"phone picture"}
@@ -55,6 +56,20 @@ export const GuaranteeBlock: React.FC = () => {
         <AccordionBlock
           data={GuaranteeData}
           className={styles.accordion_block}
+        />
+      </div>
+      <div className={cn(styles.section_container, "visible-mobile")}>
+        <AccordionBlock
+          data={GuaranteeData}
+          className={styles.accordion_block}
+        />
+        <Image
+          src={"/assets/images/hands.svg"}
+          alt={"phone picture"}
+          width={864}
+          height={911}
+          loading={"lazy"}
+          className={styles.image}
         />
       </div>
     </Container>

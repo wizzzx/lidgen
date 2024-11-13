@@ -48,30 +48,59 @@ interface Props {
 export const Footer: React.FC<Props> = ({ className }) => {
   return (
     <Container className={cn(styles.container, className)}>
-      <div className={styles.footer_subcontainer_left}>
-        <div className={styles.service}>
-          @ Сервис &laquo;Лидогенератор&raquo;, 2022
+      <div className={"hidden-mobile"}>
+        <div className={styles.footer_subcontainer_left}>
+          <div className={styles.service}>
+            @ Сервис &laquo;Лидогенератор&raquo;, 2022
+          </div>
+          <div className={styles.telephone}>
+            Остались вопросы? Звоните:{" "}
+            <span className={styles.telephone_number}>8 800 600 1776</span>
+          </div>
+          <Link
+            href={"/confidentiality_policy"}
+            className={styles.confidentiality_policy}
+          >
+            Политика конфиденциальности
+          </Link>
         </div>
-        <div className={styles.telephone}>
-          Остались вопросы? Звоните:{" "}
-          <span className={styles.telephone_number}>8 800 600 1776</span>
+        <div className={styles.footer_subcontainer_right}>
+          <div className={styles.menu}>Меню</div>
+          <nav className={styles.menu_items}>
+            {FooterNavigationData.map((item, index) => (
+              <div key={index} className={styles.menu_item}>
+                <Link href={item.route}>{item.title}</Link>
+              </div>
+            ))}
+          </nav>
         </div>
-        <Link
-          href={"/confidentiality_policy"}
-          className={styles.confidentiality_policy}
-        >
-          Политика конфиденциальности
-        </Link>
       </div>
-      <div className={styles.footer_subcontainer_right}>
-        <div className={styles.menu}>Меню</div>
-        <nav className={styles.menu_items}>
-          {FooterNavigationData.map((item, index) => (
-            <div key={index} className={styles.menu_item}>
-              <Link href={item.route}>{item.title}</Link>
-            </div>
-          ))}
-        </nav>
+      <div className={"visible-mobile"}>
+        <div className={styles.footer_subcontainer_right}>
+          <div className={styles.menu}>Меню</div>
+          <nav className={styles.menu_items}>
+            {FooterNavigationData.map((item, index) => (
+              <div key={index} className={styles.menu_item}>
+                <Link href={item.route}>{item.title}</Link>
+              </div>
+            ))}
+          </nav>
+        </div>
+        <div className={styles.footer_subcontainer_left}>
+          <div className={styles.service}>
+            @ Сервис &laquo;Лидогенератор&raquo;, 2022
+          </div>
+          <div className={styles.telephone}>
+            Остались вопросы? Звоните:{" "}
+            <span className={styles.telephone_number}>8 800 600 1776</span>
+          </div>
+          <Link
+            href={"/confidentiality_policy"}
+            className={styles.confidentiality_policy}
+          >
+            Политика конфиденциальности
+          </Link>
+        </div>
       </div>
     </Container>
   );

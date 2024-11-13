@@ -9,11 +9,11 @@
   justify-content: space-between;
   max-width: 1432px;
   width: 100%;
-  @include desktop {
-  }
+
   @include mobile {
     flex-direction: column;
-    margin-top: 150px;
+    max-width: 343px;
+    width: 100%;
   }
 
   .footer_subcontainer_left {
@@ -21,6 +21,10 @@
     flex-direction: column;
     gap: 32px;
     white-space: nowrap;
+
+    @include mobile {
+      padding-top: 54px;
+    }
 
     .service {
       font-family: var(--font-sfpro);
@@ -32,6 +36,10 @@
       font-family: var(--font-sfpro);
       font-weight: 500;
       font-size: 16px;
+
+      @include mobile {
+
+      }
 
       .telephone_number {
         font-weight: 700;
@@ -70,6 +78,11 @@
       row-gap: 37px;
       max-width: 630px;
       width: 100%;
+
+      @include mobile {
+        flex-direction: column;
+        gap: 16px;
+      }
 
       .menu_item {
         font-family: var(--font-sfpro);
