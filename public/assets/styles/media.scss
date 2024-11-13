@@ -86,7 +86,7 @@ $mobile: 374px;
     }
   }
 }
-
++
 .hidden-desktop {
   @include desktop-above {
     display: none !important;

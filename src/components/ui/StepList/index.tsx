@@ -4,7 +4,6 @@ import React from "react";
 import styles from "./index.module.scss";
 import cn from "classnames";
 import Image from "next/image";
-import { Container } from "@/components/shared/Container";
 
 interface Props {
   className?: string;
@@ -42,6 +41,7 @@ export const StepList: React.FC<Props> = ({ className, texts = [] }) => {
             alt={item.alt}
             width={item.width}
             height={item.height}
+            className={styles.image}
           />
           {texts[index] && <p className={styles.step_text}>{texts[index]}</p>}
         </div>

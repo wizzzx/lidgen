@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/Button";
 import Image from "next/image";
 import { RatingBlock } from "@/components/shared/RatingBlock";
 import { ReviewBlock } from "@/components/shared/ReviewBlock";
+import cn from "classnames";
 
 const RecommendationData = [
   {
@@ -78,7 +79,7 @@ export const RecommendationBlock: React.FC = () => {
       <RatingBlock />
       <Button
         label={"Получить займ за 5 минут"}
-        className={styles.big_button}
+        className={cn(styles.big_button, "hidden-mobile")}
       />
       <ReviewBlock />
     </Container>

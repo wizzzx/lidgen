@@ -53,13 +53,16 @@ export const RatingBlock: React.FC = () => {
             <div className={styles.subtitle}>{item.subtitle}</div>
           </div>
           <div className={styles.button_container}>
-            <div className={styles.platform}>
-              <span className={styles.underlined}>{item.platform1}</span>&nbsp;
-              <span className={styles.rating_number}>{item.rating}</span>
-            </div>
-            <div className={styles.platform}>
-              {item.platform2}&nbsp;
-              <span className={styles.rating_number}>{item.rating}</span>
+            <div className={styles.button_subcontainer}>
+              <div className={styles.platform}>
+                <span className={styles.underlined}>{item.platform1}</span>
+                &nbsp;
+                <span className={styles.rating_number}>{item.rating}</span>
+              </div>
+              <div className={styles.platform}>
+                {item.platform2}&nbsp;
+                <span className={styles.rating_number}>{item.rating}</span>
+              </div>
             </div>
             <Button
               label={"получить за 5 минут"}
@@ -70,6 +73,7 @@ export const RatingBlock: React.FC = () => {
                 alt={"clock_icon"}
                 width={48}
                 height={48}
+                className={styles.button_icon}
               />
             </Button>
           </div>

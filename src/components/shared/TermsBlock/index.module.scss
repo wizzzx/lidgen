@@ -9,6 +9,13 @@
   margin-top: -50px;
   z-index: 1;
 
+  @include mobile {
+    max-width: 343px !important;
+    padding-left: 0;
+    width: 100%;
+    margin: auto;
+  }
+
   .section_header {
     margin-top: 78px;
     padding-bottom: 32px;
@@ -16,6 +23,12 @@
     font-family: var(--font-cera);
     font-size: 64px;
     font-weight: 500;
+
+    @include mobile {
+      font-size: 32px;
+      padding-top: 70px;
+      margin-top: -50px;
+    }
   }
 
   .terms_container {
@@ -26,17 +39,33 @@
     align-items: flex-start;
     row-gap: 81px;
 
+    @include mobile {
+      row-gap: 0;
+      flex-direction: column;
+      margin-top: 28px;
+      gap: 16px;
+    }
+
     .term_container {
       display: flex;
       flex-direction: column;
       gap: 18px;
       padding-right: 166px;
 
+      @include mobile {
+        padding-right: 0;
+        gap: 8px;
+      }
+
       .term_title {
         color: #0066FF;
         font-family: var(--font-cera);
         font-weight: 500;
         font-size: 24px;
+
+        @include mobile {
+          font-size: 14px;
+        }
       }
 
       .term_text {
@@ -44,6 +73,10 @@
         font-family: var(--font-cera);
         font-weight: 500;
         font-size: 48px;
+
+        @include mobile {
+          font-size: 24px;
+        }
 
         .extra_margin {
           padding-right: 80px;
@@ -59,6 +92,12 @@
     font-size: 24px;
     padding-bottom: 53px;
     max-width: 1308px;
+
+    @include mobile {
+      font-size: 16px;
+      margin-top: 20px;
+      padding-bottom: 13px;
+    }
   }
 }
 
