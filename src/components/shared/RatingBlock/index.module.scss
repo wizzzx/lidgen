@@ -84,6 +84,9 @@
       }
 
       .button_subcontainer {
+        display: flex;
+        gap: 36px;
+
         @include mobile {
           display: flex;
           flex-direction: row;

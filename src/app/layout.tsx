@@ -101,7 +101,7 @@ const sfpro = localFont({
 });
 
 export const viewport: Viewport = {
-  width: "320px",
+  width: "374px",
   initialScale: 1,
   maximumScale: 1,
   userScalable: true,
