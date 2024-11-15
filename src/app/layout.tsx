@@ -120,15 +120,6 @@ export default function RootLayout({
         montserrat.variable,
       )}
     >
-      <head title={"Главная страница"}>
-        <script
-          src={
-            "https://api-maps.yandex.ru/v3/?apikey=ee986e19-547e-4cf9-a880-08498db6fb46&lang=ru_RU"
-          }
-          defer={true}
-          type="text/javascript"
-        />
-      </head>
       <body
         className={`${nunito.className} ${montserrat.className} ${cera.className} ${sfpro.className} app`}
       >

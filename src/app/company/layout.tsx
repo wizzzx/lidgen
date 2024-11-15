@@ -8,7 +8,7 @@ import { Footer } from "@/components/shared/Footer";
 export const metadata: Metadata = {
   title: {
     default: SITE_NAME,
-    template: `%s | ${SITE_NAME}`,
+    template: `%s | ${SITE_NAME}пе`,
   },
   description: "Lidgen/company",
 };

@@ -17,9 +17,8 @@ export default function CompanyPage() {
       <main>
         <Container>
           <TitleBlock />
-          <MapBlock />
-          {/*   new blocks*/}
           <SelectedMfoInfo />
+          <MapBlock />
           <InstructionsBlock />
           <TermsBlock />
           <ReviewBlock />
