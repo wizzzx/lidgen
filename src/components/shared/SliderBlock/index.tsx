@@ -67,7 +67,11 @@ export const SliderBlock: React.FC<Props> = ({ className }) => {
             <span className={styles.payment_final}>{amount}&#8381;</span>
           </p>
         </div>
-        <Button label={"Начать оформление"} className={styles.button} />
+        <Button
+          label={"Начать оформление"}
+          className={styles.button}
+          redirect={"/company"}
+        />
       </div>
     </div>
   );

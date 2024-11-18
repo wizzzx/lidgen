@@ -1,0 +1,33 @@
+.container {
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  max-width: 524px;
+  width: 100%;
+  font-family: var(--font-sfpro);
+  text-align: center;
+  margin: auto;
+  border-radius: 24px;
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-top: 42px;
+
+    .section_header {
+      font-size: 36px;
+      font-weight: 500;
+    }
+
+    .subheader {
+      font-size: 18px;
+      font-weight: 400;
+    }
+  }
+
+  .input_container {
+    padding-top: 130px;
+    padding-bottom: 205px;
+  }
+}

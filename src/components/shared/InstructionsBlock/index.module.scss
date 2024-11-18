@@ -29,6 +29,7 @@
       font-size: 48px;
       text-align: left;
       margin-bottom: 72px;
+
     }
 
     @include mobile {
@@ -45,6 +46,10 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
+
+    @include desktop {
+      gap: 50px;
+    }
 
     @include mobile {
       flex-direction: column;

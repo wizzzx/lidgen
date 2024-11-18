@@ -20,6 +20,7 @@ export default function SignUpLayout({
     <>
       <ContainerLayout>
         <Header />
+        {children}
       </ContainerLayout>
       <Footer />
     </>

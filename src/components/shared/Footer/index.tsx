@@ -48,7 +48,7 @@ interface Props {
 export const Footer: React.FC<Props> = ({ className }) => {
   return (
     <Container className={cn(styles.container, className)}>
-      <div className={"hidden-mobile"}>
+      <div className={cn("hidden-mobile", styles.wrapper)}>
         <div className={styles.footer_subcontainer_left}>
           <div className={styles.service}>
             @ Сервис &laquo;Лидогенератор&raquo;, 2022
@@ -75,7 +75,7 @@ export const Footer: React.FC<Props> = ({ className }) => {
           </nav>
         </div>
       </div>
-      <div className={"visible-mobile"}>
+      <div className={cn("visible-mobile", styles.wrapper)}>
         <div className={styles.footer_subcontainer_right}>
           <div className={styles.menu}>Меню</div>
           <nav className={styles.menu_items}>

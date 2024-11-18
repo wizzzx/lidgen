@@ -7,7 +7,7 @@ import Image from "next/image";
 
 interface Props {
   className?: string;
-  texts?: string[];
+  texts: string[];
 }
 
 const StepData = [
