@@ -1,0 +1,11 @@
+.container {
+  background-image: image-set(
+                  url('/assets/images/reg_bg-1x-min.webp') 1x,
+                  url('/assets/images/reg_bg-2x-min.webp') 2x
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+
+}
