@@ -1,23 +1,84 @@
 .container {
+  background-color: #FFFFFF;
+  max-width: 525px;
+  width: 100%;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 47px;
+  margin-bottom: 40px;
 
-
-  .header {
-
+  .header_container {
+    padding-top: 59px;
+    padding-bottom: 71px;
 
     .section_header {
-
+      font-family: var(--font-cera);
+      font-size: 36px;
+      text-align: center;
+      font-weight: 500;
+      padding-bottom: 20px;
     }
 
     .subheader {
-
+      font-family: var(--font-inter);
+      font-size: 16px;
+      font-weight: 400;
+      text-align: center;
+      padding-bottom: 12px;
     }
 
     .mock_phone_number {
-
+      color: #007AFF;
+      text-decoration: underline;
+      font-size: 16px;
+      font-weight: 400;
+      text-align: center;
     }
   }
 
   .reg_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
+    .code_container {
+      display: flex;
+      flex-direction: column;
+      gap: 29px;
+
+      .input_text {
+        font-family: var(--font-inter);
+        font-size: 14px;
+        font-weight: 400;
+        text-align: center;
+
+        .bold {
+          font-weight: 700;
+        }
+      }
+    }
+
+    .button {
+      font-family: var(--font-inter);
+      font-size: 16px;
+      font-weight: 400;
+      color: #FFFFFF;
+      background-color: #0066FF;
+      border-radius: 8px;
+      text-align: center;
+      max-width: 388px;
+      width: 100%;
+      height: 59px;
+      margin-top: 53px;
+      margin-bottom: 64px;
+    }
+
+    .checkboxes_container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      padding-bottom: 114px;
+    }
   }
 }

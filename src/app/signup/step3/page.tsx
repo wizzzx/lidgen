@@ -9,6 +9,7 @@ export default function SignupStep3() {
   return (
     <main>
       <Container className={styles.container}>
+        {/*<div className={styles.ellipse}></div>*/}
         <Image
           src={"/assets/images/telephone_pic.webp"}
           alt={"telephone_pic"}
@@ -16,6 +17,7 @@ export default function SignupStep3() {
           height={655}
           loading={"eager"}
         />
+        {/*  blob*/}
       </Container>
     </main>
   );

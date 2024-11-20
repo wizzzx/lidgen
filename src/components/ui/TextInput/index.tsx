@@ -28,7 +28,7 @@ export const TextInput: React.FC<Props> = ({ className, placeholder }) => {
     formState: { errors },
   } = formMethods;
 
-  const onSubmit = (data) => {
+  const onSubmit = (data: any) => {
     console.log(data);
   };
 

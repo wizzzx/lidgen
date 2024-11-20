@@ -16,6 +16,7 @@ export default function SignupStep1() {
           <li className={styles.list_item}>Получите деньги</li>
         </ol>
         <RegStep1 />
+        {/*добавить сюда react input mask, а также настроить валидацию черезyup, чтобы  не позволяла отправлять неверное количество символов*/}
         <Image
           src={"/assets/images/girl-1-min.webp"}
           alt={"girl"}

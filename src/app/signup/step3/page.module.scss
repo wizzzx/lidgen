@@ -1,11 +1,9 @@
 .container {
-  background-image: image-set(
-                  url('/assets/images/reg_bg-1x-min.webp') 1x,
-                  url('/assets/images/reg_bg-2x-min.webp') 2x
-  );
+  background: linear-gradient(51.01deg, #88AFF4 -4.29%, #628DD9 80.67%);;
   background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  position: relative;
+  z-index: 1;
+
 
 
 }

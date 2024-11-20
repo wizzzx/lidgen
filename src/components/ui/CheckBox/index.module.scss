@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+
+  .checkbox{
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+  }
+
+  .label{
+    font-family: var(--font-inter);
+    color: #7D858B;
+    font-size: 12px;
+    font-weight: 500;
+
+    .span{
+      color: #6B83D9;
+      text-decoration: underline;
+    }
+  }
+}
