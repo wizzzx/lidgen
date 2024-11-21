@@ -4,6 +4,11 @@ import React from "react";
 import Link from "next/link";
 import styles from "./index.module.scss";
 import { DropDownMenu } from "@/components/ui/DropDownMenu";
+import cn from "classnames";
+
+interface Props {
+  className?: string;
+}
 
 const navigationButtons = [
   {
@@ -32,9 +37,9 @@ const navigationButtons = [
   },
 ];
 
-export const Header: React.FC = () => {
+export const Header: React.FC<Props> = ({ className }) => {
   return (
-    <header className={styles.header}>
+    <header className={cn(styles.header, className)}>
       <Link href="/" className={styles.logo_link}>
         <span className={styles.highlight_logo}>MFO</span> PLATFORM
       </Link>

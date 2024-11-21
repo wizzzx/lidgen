@@ -1,8 +1,9 @@
+@import 'public/assets/styles/media';
+
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-
 
 
   .label {
@@ -13,6 +14,11 @@
     text-align: left;
     width: 358px;
     padding-bottom: 4px;
+
+    @include mobile {
+      max-width: 342px;
+      width: 100%;
+    }
   }
 
   .wrapper {
@@ -30,6 +36,11 @@
     border: none;
     color: black;
     padding-left: 12px;
+
+    @include mobile {
+      max-width: 342px;
+      width: 100%;
+    }
   }
 
   .err_msg {
@@ -48,6 +59,11 @@
     font-size: 16px;
     font-weight: 400;
     margin-top: 44px;
+
+    @include mobile {
+      max-width: 342px;
+      width: 100%;
+    }
   }
 }
 
