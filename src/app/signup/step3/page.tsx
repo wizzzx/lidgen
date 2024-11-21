@@ -4,6 +4,7 @@ import React from "react";
 import styles from "./page.module.scss";
 import { Container } from "@/components/shared/Container";
 import Image from "next/image";
+import { RegStep3 } from "@/components/shared/RegStep3";
 
 export default function SignupStep3() {
   return (
@@ -16,8 +17,9 @@ export default function SignupStep3() {
           width={655}
           height={655}
           loading={"eager"}
+          className={styles.image}
         />
-        {/*  blob*/}
+        <RegStep3 />
       </Container>
     </main>
   );
