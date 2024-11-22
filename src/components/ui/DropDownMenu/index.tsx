@@ -4,6 +4,7 @@ import cn from "classnames";
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 interface DropDownMenuItemProps {
   title: string;
@@ -33,7 +34,6 @@ export const DropDownMenu: React.FC<Props> = ({ data, className }) => {
   const handleOpen = () => {
     setIsOpen(!isOpen);
   };
-
   return (
     <div className={cn(styles.container, className)}>
       <button onClick={handleOpen}>
@@ -43,6 +43,8 @@ export const DropDownMenu: React.FC<Props> = ({ data, className }) => {
           priority={true}
           width={20}
           height={12}
+          loading={"eager"}
+          className={styles.menu}
         />
       </button>
       {isOpen ? (

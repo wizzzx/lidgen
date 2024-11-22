@@ -6,6 +6,7 @@ import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import { SmartForm } from "@/components/hocs/SmartForm";
+import cn from "classnames";
 
 type FormData = {
   firstName: string;
@@ -64,7 +65,9 @@ export const RegStep3: React.FC = () => {
       <div className={styles.main_container}>
         <header className={styles.header_container}>
           <h2 className={styles.section_header}>Заполните анкету</h2>
-          <p className={styles.subheader}>Это не займет много времени</p>
+          <p className={cn(styles.subheader, "hidden-mobile")}>
+            Это не займет много времени
+          </p>
         </header>
         <div className={styles.wide_input_item}>
           <label htmlFor="">Фамилия</label>
@@ -86,7 +89,7 @@ export const RegStep3: React.FC = () => {
           <input type="date" {...register("birthDate")} />
           <p>{errors.birthDate?.message}</p>
         </div>
-        <div className={styles.passport_container}>
+        <div className={cn(styles.passport_container, "hidden-mobile")}>
           <div className={styles.thin_input_item}>
             <label htmlFor="">Серия</label>
             <input type="text" {...register("passportSeries")} />

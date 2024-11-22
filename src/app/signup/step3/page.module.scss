@@ -1,9 +1,16 @@
+@import '/public/assets/styles/media';
+
 .container {
   background: linear-gradient(51.01deg, #88AFF4 -4.29%, #628DD9 80.67%);;
   background-size: cover;
   position: relative;
   z-index: 1;
   display: flex;
+  margin-top: 75px;
+
+  @include mobile {
+
+  }
 
   .image {
     margin-top: auto;

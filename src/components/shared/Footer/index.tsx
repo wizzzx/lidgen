@@ -5,6 +5,7 @@ import styles from "./index.module.scss";
 import cn from "classnames";
 import { Container } from "@/components/shared/Container";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const FooterNavigationData = [
   {
@@ -46,8 +47,17 @@ interface Props {
 }
 
 export const Footer: React.FC<Props> = ({ className }) => {
+  const pathname = usePathname();
+  const isHeaderDark = pathname ? pathname.startsWith("/signup/") : false;
+
   return (
-    <Container className={cn(styles.container, className)}>
+    <Container
+      className={
+        isHeaderDark
+          ? cn(styles.container_dark, className)
+          : cn(styles.container, className)
+      }
+    >
       <div className={cn("hidden-mobile", styles.wrapper)}>
         <div className={styles.footer_subcontainer_left}>
           <div className={styles.service}>
