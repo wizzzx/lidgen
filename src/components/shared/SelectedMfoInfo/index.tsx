@@ -5,12 +5,14 @@ import styles from "./index.module.scss";
 import cn from "classnames";
 import { Container } from "@/components/shared/Container";
 import Image from "next/image";
+import { MfoData } from "@/types/mfo_data";
 
 interface Props {
   className?: string;
+  mfo: MfoData;
 }
 
-export const SelectedMfoInfo: React.FC<Props> = ({ className }) => {
+export const SelectedMfoInfo: React.FC<Props> = ({ className, mfo }) => {
   return (
     <Container className={cn(styles.container, className)}>
       <Image
@@ -26,22 +28,22 @@ export const SelectedMfoInfo: React.FC<Props> = ({ className }) => {
           <h3 className={styles.section_header}>Юридическая информация</h3>
           <ul className={styles.list}>
             <li>
-              <span className={styles.bold}>Юридическое название:</span>
-              Общество с ограниченной ответственностью "Гига Займ"
+              <span className={styles.bold}>Юридическое название:</span>{" "}
+              {mfo?.regFullName}
             </li>
             <li>
-              <span className={styles.bold}>ИНН:</span>9900039378
+              <span className={styles.bold}>ИНН:</span> {mfo?.regInn}
             </li>
             <li>
-              <span className={styles.bold}>ОГРН:</span>2366373308233
+              <span className={styles.bold}>ОГРН: </span> {mfo?.regOgrn}
             </li>
             <li>
-              <span className={styles.bold}>Юридическая информация:</span>
+              <span className={styles.bold}>Юридическая информация:</span>{" "}
               Свидетельство о внесении сведений о юридическом лице в
               государственный реестр микрофинансовых организаций за
               регистрационным номером{" "}
-              <span className={styles.underlined_blue}>2120177002077</span>.
-              Дата внесения 11.09.2021г.
+              <span className={styles.underlined_blue}>{mfo?.regNumber}</span>.
+              Дата внесения {mfo?.regDate}.
             </li>
           </ul>
         </div>
@@ -49,23 +51,23 @@ export const SelectedMfoInfo: React.FC<Props> = ({ className }) => {
           <h3 className={styles.section_header}>Общая информация</h3>
           <ul className={styles.list}>
             <li>
-              <span className={styles.bold}>Бренд:</span>Гига займ
+              <span className={styles.bold}>Бренд:</span> {mfo?.regConcName}
             </li>
             <li>
-              <span className={styles.bold}>Номер в перечне МФО в ЦБ:</span>
-              21105730000002
+              <span className={styles.bold}>Номер в перечне МФО в ЦБ:</span>{" "}
+              {mfo?.regNumber}
             </li>
             <li>
-              <span className={styles.bold}>Сайт:</span>
-              <span className={styles.underlined_blue}>gigazaym.ru</span>
+              <span className={styles.bold}>Сайт:</span>{" "}
+              <span className={styles.underlined_blue}>{mfo?.regSite}</span>
             </li>
             <li>
-              <span className={styles.bold}>email:</span>
-              <span className={styles.underlined_blue}>gigazaym@inbox.ru</span>
+              <span className={styles.bold}>email:</span>{" "}
+              <span className={styles.underlined_blue}>{mfo?.regEmail}</span>
             </li>
             <li>
-              <span className={styles.bold}>Номер телефона:</span>+7 (499)
-              299-00-00
+              <span className={styles.bold}>Номер телефона:</span>{" "}
+              {mfo?.regPhoneNumber}
             </li>
             <li>
               <span className={styles.bold}>Социальные сети:</span>
@@ -109,15 +111,7 @@ export const SelectedMfoInfo: React.FC<Props> = ({ className }) => {
         </div>
         <div className={styles.info_section}>
           <h3 className={styles.section_header}>О компании</h3>
-          <p>
-            ООО МФК «ГигаЗайм» — система моментального электронного кредитования
-            — предоставляет онлайн микрозаймы «под ключ», начиная с рассмотрения
-            заявки до получения клиентом денежных средств. Клиенты получают
-            займы без посещения офиса. «ГигаЗайм» — выгодная альтернатива
-            банковскому кредитованию — получить займ онлайн можно в течение 24
-            часов. Обработка заявок на заём 24/7 без выходных. Клиенты получают
-            займы без посещения офиса. «ГигаЗайм»
-          </p>
+          <p>{mfo?.regAbout}</p>
         </div>
       </div>
     </Container>
