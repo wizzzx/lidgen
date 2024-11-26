@@ -8,7 +8,6 @@ import { TermsBlock } from "@/components/shared/TermsBlock";
 import { ReviewBlock } from "@/components/shared/ReviewBlock";
 import { GuaranteeBlock } from "@/components/shared/GuaranteeBlock";
 import { OtherOffersBlock } from "@/components/shared/OtherOffersBlock";
-import { SelectedMfoInfo } from "@/components/shared/SelectedMfoInfo";
 import { MapBlock } from "@/components/shared/MapBlock";
 
 export default function CompanyPage() {
@@ -17,7 +16,6 @@ export default function CompanyPage() {
       <main>
         <Container>
           <TitleBlock />
-          <SelectedMfoInfo />
           <MapBlock />
           <InstructionsBlock />
           <TermsBlock />
