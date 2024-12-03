@@ -1,7 +1,5 @@
 "use client";
 
-import { notFound } from "next/navigation";
-import { MfoData } from "@/types/mfo_data";
 import { SelectedMfoInfo } from "@/components/shared/SelectedMfoInfo";
 import { TitleBlock } from "@/components/shared/TitleBlock";
 import { MapBlock } from "@/components/shared/MapBlock";
@@ -11,15 +9,17 @@ import { ReviewBlock } from "@/components/shared/ReviewBlock";
 import { GuaranteeBlock } from "@/components/shared/GuaranteeBlock";
 import { OtherOffersBlock } from "@/components/shared/OtherOffersBlock";
 import * as React from "react";
+import data from "../../../data/mfo_data.json";
+import { notFound } from "next/navigation";
 
 interface Props {
-  params: { regInn: string };
+  params: {
+    regUrl: string;
+  };
 }
 
 export default function MfoPage({ params }: Props) {
-  const { regInn } = params;
-
-  const selectedMfo = MfoData.find((mfo) => mfo.regInn === regInn);
+  const selectedMfo = data.find((mfo) => mfo.regUrl === params.regUrl);
 
   if (!selectedMfo) {
     notFound();
@@ -28,7 +28,7 @@ export default function MfoPage({ params }: Props) {
   return (
     <div>
       <TitleBlock />
-      <SelectedMfoInfo mfo={selectedMfo} />
+      <SelectedMfoInfo data={selectedMfo} />
       <MapBlock />
       <InstructionsBlock />
       <TermsBlock />

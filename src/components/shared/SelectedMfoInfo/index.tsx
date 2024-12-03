@@ -5,14 +5,26 @@ import styles from "./index.module.scss";
 import cn from "classnames";
 import { Container } from "@/components/shared/Container";
 import Image from "next/image";
-import { MfoData } from "@/types/mfo_data";
+
+interface MfoData {
+  regFullName: string;
+  regInn: string;
+  regOgrn: string;
+  regNumber: string;
+  regDate: string;
+  regShortName: string;
+  regSite: string;
+  regEmail: string;
+  regPhoneNumber: string;
+  regAbout: string;
+}
 
 interface Props {
   className?: string;
-  mfo: MfoData;
+  data: MfoData;
 }
 
-export const SelectedMfoInfo: React.FC<Props> = ({ className, mfo }) => {
+export const SelectedMfoInfo: React.FC<Props> = ({ className, data }) => {
   return (
     <Container className={cn(styles.container, className)}>
       <Image
@@ -29,21 +41,21 @@ export const SelectedMfoInfo: React.FC<Props> = ({ className, mfo }) => {
           <ul className={styles.list}>
             <li>
               <span className={styles.bold}>Юридическое название:</span>{" "}
-              {mfo?.regFullName}
+              {data?.regFullName}
             </li>
             <li>
-              <span className={styles.bold}>ИНН:</span> {mfo?.regInn}
+              <span className={styles.bold}>ИНН:</span> {data?.regInn}
             </li>
             <li>
-              <span className={styles.bold}>ОГРН: </span> {mfo?.regOgrn}
+              <span className={styles.bold}>ОГРН: </span> {data?.regOgrn}
             </li>
             <li>
               <span className={styles.bold}>Юридическая информация:</span>{" "}
               Свидетельство о внесении сведений о юридическом лице в
               государственный реестр микрофинансовых организаций за
               регистрационным номером{" "}
-              <span className={styles.underlined_blue}>{mfo?.regNumber}</span>.
-              Дата внесения {mfo?.regDate}.
+              <span className={styles.underlined_blue}>{data?.regNumber}</span>.
+              Дата внесения {data?.regDate}.
             </li>
           </ul>
         </div>
@@ -51,23 +63,23 @@ export const SelectedMfoInfo: React.FC<Props> = ({ className, mfo }) => {
           <h3 className={styles.section_header}>Общая информация</h3>
           <ul className={styles.list}>
             <li>
-              <span className={styles.bold}>Бренд:</span> {mfo?.regConcName}
+              <span className={styles.bold}>Бренд:</span> {data?.regShortName}
             </li>
             <li>
               <span className={styles.bold}>Номер в перечне МФО в ЦБ:</span>{" "}
-              {mfo?.regNumber}
+              {data?.regNumber}
             </li>
             <li>
               <span className={styles.bold}>Сайт:</span>{" "}
-              <span className={styles.underlined_blue}>{mfo?.regSite}</span>
+              <span className={styles.underlined_blue}>{data?.regSite}</span>
             </li>
             <li>
               <span className={styles.bold}>email:</span>{" "}
-              <span className={styles.underlined_blue}>{mfo?.regEmail}</span>
+              <span className={styles.underlined_blue}>{data?.regEmail}</span>
             </li>
             <li>
               <span className={styles.bold}>Номер телефона:</span>{" "}
-              {mfo?.regPhoneNumber}
+              {data?.regPhoneNumber}
             </li>
             <li>
               <span className={styles.bold}>Социальные сети:</span>
@@ -111,7 +123,7 @@ export const SelectedMfoInfo: React.FC<Props> = ({ className, mfo }) => {
         </div>
         <div className={styles.info_section}>
           <h3 className={styles.section_header}>О компании</h3>
-          <p>{mfo?.regAbout}</p>
+          <p>{data?.regAbout}</p>
         </div>
       </div>
     </Container>

@@ -8,10 +8,6 @@ export const routes = {
   [AppRoutes.AUTH]: {
     root: "/user",
   },
-  [AppRoutes.MAIN_PAGE]: {
-    root: "/",
-    info: "/company",
-  },
   [AppRoutes.ABOUT]: {
     about: "/about",
   },

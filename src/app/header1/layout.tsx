@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     default: SITE_NAME,
     template: `%s | ${SITE_NAME}пе`,
   },
-  description: "Lidgen/company",
+  description: "Lidgen/header1",
 };
 
 export default function CompanyPageLayout({
