@@ -6,6 +6,7 @@ import { Viewport } from "next";
 import "../../public/assets/styles/globals.scss";
 import React from "react";
 import cn from "classnames";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const nunito = Nunito({
   subsets: ["cyrillic", "latin"],
@@ -125,6 +126,8 @@ export default function RootLayout({
       >
         <Providers>{children}</Providers>
       </body>
+      {/*<GoogleAnalytics gaId={} /> */}
+      {/*нужен домен! потом добавить сюда трек айди*/}
     </html>
   );
 }
