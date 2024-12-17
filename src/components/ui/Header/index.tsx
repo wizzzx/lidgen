@@ -4,7 +4,6 @@ import React from "react";
 import Link from "next/link";
 import styles from "./index.module.scss";
 import { DropDownMenu } from "@/components/ui/DropDownMenu";
-import cn from "classnames";
 import { usePathname } from "next/navigation";
 
 interface Props {
@@ -21,18 +20,6 @@ const navigationButtons = [
     route: "/partners",
   },
   {
-    title: "Категория 1",
-    route: "/cat1",
-  },
-  {
-    title: "Категория 2",
-    route: "/cat2",
-  },
-  {
-    title: "Категория 3",
-    route: "/cat3",
-  },
-  {
     title: "Блог",
     route: "/blog",
   },
@@ -46,9 +33,15 @@ export const Header: React.FC<Props> = ({ className }) => {
     <header className={isHeaderBlue ? styles.container_blue : styles.container}>
       <div className={styles.header}>
         <Link href="/" className={styles.logo_link}>
-          <span className={styles.highlight_logo}>MFO</span> PLATFORM
+          <div className={styles.logo}>
+            <p className={styles.highlight_logo}>PLAT</p>
+            <p>FORM</p>
+          </div>
+          <div className={styles.header_dot}></div>
+          <div className={styles.logo_text}>
+            маркетплейс микрофинансовых продуктов
+          </div>
         </Link>
-
         <nav className={"hidden-tablets"}>
           <ul className={styles.nav_buttons}>
             {navigationButtons.map((button, index) => (
