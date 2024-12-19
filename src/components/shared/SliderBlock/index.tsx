@@ -39,8 +39,7 @@ export const SliderBlock: React.FC<Props> = ({ className }) => {
           step={10000}
           max={1000000}
           min={50000}
-          startHeader={"50 тыс."}
-          endHeader={"1 млн."}
+          startHeader={"Желаемая сумма"}
         />
         <RangeWithInput
           name={"loan_data.term"}
@@ -50,23 +49,17 @@ export const SliderBlock: React.FC<Props> = ({ className }) => {
           step={1}
           rangeData={[1, 24]}
           term={term}
-          startHeader={"1 месяц"}
-          endHeader={"2 года"}
+          startHeader={"Желаемый срок"}
         />
       </div>
       <div className={styles.button_container}>
-        <div className={styles.button_container_text}>
-          <p>
-            Вы берете <span className={styles.bold}>{amount} до 5 апреля</span>
-            (включительно) 23:59{" "}
-          </p>
-          <div className={styles.dot}></div>
-          <p>
-            К возврату:{" "}
-            <span className={styles.struck}>{amountPlusPercent}&#8381;</span>{" "}
-            <span className={styles.payment_final}>{amount}&#8381;</span>
-          </p>
-        </div>
+        {/*<div className={styles.button_container_text}>*/}
+        {/*  <p>*/}
+        {/*    К возврату:{" "}*/}
+        {/*    <span className={styles.struck}>{amountPlusPercent}&#8381;</span>{" "}*/}
+        {/*    <span className={styles.payment_final}>{amount}&#8381;</span>*/}
+        {/*  </p>*/}
+        {/*</div>*/}
         <Button label={"Начать оформление"} className={styles.button} />
       </div>
     </div>

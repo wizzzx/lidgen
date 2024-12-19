@@ -79,6 +79,15 @@ export const RangeWithInput: FC<propsType> = ({
           <p>{startHeader}</p>
           <p>{endHeader}</p>
         </div>
+        <div>
+          <input
+            type="number"
+            value={inputValue}
+            onChange={handleInputChange}
+            className={styles.input}
+            step={10000}
+          />
+        </div>
         <RangeSlider
           amountForTextInformation={amountForTextInformation}
           textInformation={textInformation}
@@ -90,15 +99,6 @@ export const RangeWithInput: FC<propsType> = ({
           name={name}
           values={[value]}
           setValues={handleSliderChange}
-        />
-      </div>
-      <div>
-        <input
-          type="number"
-          value={inputValue}
-          onChange={handleInputChange}
-          className={styles.input}
-          step={10000}
         />
       </div>
     </div>

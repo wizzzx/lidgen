@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 42px 50px 40px 50px;
+  background-image: url("/assets/images/girl_with_bags_bg.png");
+  background-size: cover;
+  align-content: center;
+  max-width: 1312px;
+  width: 100%;
+  border-radius: 24px;
+
+  .list_container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    list-style: none;
+
+    .list_item {
+      position: relative;
+      padding-left: 2.5rem;
+      color: #FFFFFF;
+      font-family: var(--font-sfpro);
+      font-size: 32px;
+    }
+
+    .list_item:before {
+      content: url('/assets/icons/ui/bullet.svg');
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 19px;
+      height: 17px;
+    }
+  }
+}

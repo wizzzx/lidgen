@@ -22,8 +22,8 @@
       justify-content: space-between;
       font-family: var(--font-nunito);
       color: #3E5174;
-      font-size: 22px;
-      font-weight: 500;
+      font-size: 14px;
+      font-weight: 400;
 
       @include mobile {
         font-size: 12px;
@@ -33,15 +33,16 @@
   }
 
   .input {
-    width: 235px;
-    height: 59px;
+    width: 353px;
+    height: 54px;
     border-radius: 6px;
     font-family: var(--font-montserrat);
-    font-size: 32px;
-    font-weight: 500;
+    font-size: 16px;
+    font-weight: 400;
     border: transparent;
-    text-align: center;
-    outline-color: rgba(64, 101, 246, 1);
+    background-color: #F2F2F2;
+    padding: 12px 15px 12px 15px;
+    color: #16142B;
 
     @include mobile {
       min-width: 343px;

@@ -4,6 +4,8 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  max-width: 353px;
+  width: 100%;
 }
 
 .track_container {
@@ -29,9 +31,9 @@
 }
 
 .track_line_filled {
-  height: 18px;
+  height: 5px;
   background: linear-gradient(90deg, #0066FF 0%, #70A9FF 100%);
-  border-radius: 53px;
+  border-radius: 20px;
   position: absolute;
   left: 0;
   top: -11px;
@@ -45,8 +47,8 @@
 }
 
 .track_line_unfilled {
-  height: 18px;
-  border-radius: 53px;
+  height: 5px;
+  border-radius: 20px;
   background-color: #9FA7AF;
   float: right;
   position: absolute;
@@ -62,16 +64,17 @@
 }
 
 .thumb {
-  height: 42px;
-  width: 42px;
+  height: 19px;
+  width: 19px;
   border-radius: 50%;
-  background-color: #FFFFFF;
+  //background-color: #FFFFFF;
+  background-color: #0066FF;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 6px solid #6AA3FA;
+  //border: 6px solid #6AA3FA;
   outline: none;
-  top: -3px;
+  top: -8px;
   position: relative;
   z-index: 1;
 
