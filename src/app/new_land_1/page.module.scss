@@ -8,3 +8,38 @@
     color: #007AFF;
   }
 }
+
+.text_container {
+  display: flex;
+  max-width: 1312px;
+  width: 100%;
+
+  .header_icons_container {
+    display: flex;
+    flex-direction: column;
+
+    .header {
+      color: #3E5174;
+      font-size: 64px;
+      font-family: var(--font-sfpro);
+      font-weight: 500;
+    }
+
+    .icon_container {
+
+    }
+  }
+
+  .content_container {
+
+
+    .section_subheader {
+
+    }
+
+    .section_paragraph {
+
+    }
+  }
+
+}
