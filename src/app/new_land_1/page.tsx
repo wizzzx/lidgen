@@ -5,6 +5,7 @@ import styles from "./page.module.scss";
 import { TitleBlockNewVariant } from "@/components/shared/TitleBlockNewVariant";
 import { LinkSlider } from "@/components/shared/LinkSlider";
 import Image from "next/image";
+import { MfoCard } from "@/components/shared/MfoCard";
 
 export default function LandingOne() {
   return (
@@ -15,6 +16,7 @@ export default function LandingOne() {
       </p>
       <TitleBlockNewVariant />
       <LinkSlider />
+
       <div className={styles.text_container}>
         <div className={styles.header_icons_container}>
           <h2 className={styles.header}>Займ онлайн - ваш осознанный выбор</h2>
@@ -62,6 +64,23 @@ export default function LandingOne() {
             стандарт качества и хорошую репутацию.
           </p>
         </div>
+      </div>
+
+      <div className={styles.cards_container}>
+        <div className={styles.cards_grid}>
+          <MfoCard />
+          <MfoCard />
+          <MfoCard />
+          <MfoCard />
+          <MfoCard />
+          <MfoCard />
+          <MfoCard />
+          <MfoCard />
+        </div>
+
+        <button className={styles.cards_button}>
+          Получить займ за 5 минут
+        </button>
       </div>
     </>
   );
