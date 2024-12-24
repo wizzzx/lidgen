@@ -6,6 +6,7 @@ import { TitleBlockNewVariant } from "@/components/shared/TitleBlockNewVariant";
 import { LinkSlider } from "@/components/shared/LinkSlider";
 import Image from "next/image";
 import { MfoCard } from "@/components/shared/MfoCard";
+import { InstructionsBlock } from "@/components/shared/InstructionsBlock";
 
 export default function LandingOne() {
   return (
@@ -82,6 +83,8 @@ export default function LandingOne() {
           Получить займ за 5 минут
         </button>
       </div>
+
+      <InstructionsBlock />
     </>
   );
 }
