@@ -12,22 +12,22 @@ import cn from "classnames";
 const RecommendationData = [
   {
     text: "Крупные официальные компании из реестра ЦБ",
-    routeSrc: "/assets/icons/ui/bank.svg",
+    routeSrc: "/assets/icons/ui/bank_white.svg",
     alt: "bank",
   },
   {
     text: "Высокий рейтинг на сайтах otzovik.ru и banki.ru",
-    routeSrc: "/assets/icons/ui/stars.svg",
+    routeSrc: "/assets/icons/ui/stars_white.svg",
     alt: "stars",
   },
   {
     text: "Отлаженные процессы и быстрое время одобрения",
-    routeSrc: "/assets/icons/ui/timer.svg",
+    routeSrc: "/assets/icons/ui/clock_white.svg",
     alt: "timer",
   },
   {
     text: "Высокий процент одобрения",
-    routeSrc: "/assets/icons/ui/thumbs.svg",
+    routeSrc: "/assets/icons/ui/thumb_white.svg",
     alt: "thumbs up",
   },
 ];
@@ -51,36 +51,21 @@ export const RecommendationBlock: React.FC = () => {
       </h3>
       <div className={styles.recommendations_container}>
         {RecommendationData.map((item, index) => (
-          <React.Fragment key={index}>
-            <div className={styles.recommendation_container}>
-              <div className={styles.recommendation_icon}>
-                <Image
-                  src={item.routeSrc}
-                  alt={item.alt}
-                  width={60}
-                  height={60}
-                />
-              </div>
-              <div>
-                <div className={styles.recommendation_text}>{item.text}</div>
-              </div>
+          <div className={styles.recommendation_container} key={index}>
+            <div className={styles.recommendation_icon}>
+              <Image
+                src={item.routeSrc}
+                alt={item.alt}
+                width={60}
+                height={60}
+              />
             </div>
-          </React.Fragment>
-        ))}
-      </div>
-      <div className={styles.terms_container}>
-        {TermsData.map((item, index) => (
-          <div key={index} className={styles.term_container}>
-            <div className={styles.term_title}>{item.title}</div>
-            <div className={styles.term_text}>{item.text}</div>
+            <div>
+              <div className={styles.recommendation_text}>{item.text}</div>
+            </div>
           </div>
         ))}
       </div>
-      <RatingBlock />
-      <Button
-        label={"Получить займ за 5 минут"}
-        className={cn(styles.big_button, "hidden-mobile")}
-      />
       <ReviewBlock />
     </Container>
   );

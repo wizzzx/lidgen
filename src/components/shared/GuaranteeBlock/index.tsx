@@ -43,13 +43,12 @@ const GuaranteeData = [
 export const GuaranteeBlock: React.FC = () => {
   return (
     <Container className={styles.container}>
-      <h2 className={styles.section_header}>Займ на карту онлайн за 5 минут</h2>
       <div className={cn(styles.section_container, "hidden-mobile")}>
         <Image
-          src={"/assets/images/hands.svg"}
+          src={"/assets/images/hands_phone_blurred.png"}
           alt={"phone picture"}
-          width={864}
-          height={911}
+          width={687}
+          height={725}
           loading={"lazy"}
           className={styles.image}
         />

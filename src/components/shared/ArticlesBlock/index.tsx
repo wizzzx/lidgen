@@ -3,7 +3,6 @@
 import React from "react";
 import styles from "./index.module.scss";
 import { Container } from "@/components/shared/Container";
-import { OtherOffersBlock } from "@/components/shared/OtherOffersBlock";
 import Image from "next/image";
 import Link from "next/link";
 import cn from "classnames";
@@ -50,15 +49,15 @@ const ArticlesData = [
 export const ArticlesBlock: React.FC = () => {
   return (
     <Container className={styles.container}>
-      <div className={styles.ellipse}></div>
+      {/*<div className={styles.ellipse}></div>*/}
       <div className={cn(styles.articles_container, "hidden-tablets")}>
         {ArticlesData.map((item) => (
           <div key={item.id} className={styles.card_container}>
             <Image
               src={item.routeSrc}
               alt={item.alt}
-              width={324}
-              height={266}
+              width={292}
+              height={214}
               loading={"lazy"}
               className={styles.card_image}
             />
@@ -72,7 +71,7 @@ export const ArticlesBlock: React.FC = () => {
           </div>
         ))}
       </div>
-      <OtherOffersBlock className={styles.other_offers} />
+      {/*<OtherOffersBlock className={styles.other_offers} />*/}
     </Container>
   );
 };

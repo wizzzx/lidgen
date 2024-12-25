@@ -43,7 +43,7 @@ const AccordionItem: React.FC<AccordionBlockProps> = ({
       {!isOpen && (
         <Image
           src={"/assets/icons/ui/accordion_arrow.svg"}
-          alt={"accordion arrow"}
+          alt={"arrow"}
           className={styles.arrow_icon}
           width={40}
           height={40}

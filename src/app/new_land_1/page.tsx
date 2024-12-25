@@ -7,6 +7,11 @@ import { LinkSlider } from "@/components/shared/LinkSlider";
 import Image from "next/image";
 import { MfoCard } from "@/components/shared/MfoCard";
 import { InstructionsBlock } from "@/components/shared/InstructionsBlock";
+import { TermsBlock } from "@/components/shared/TermsBlock";
+import { RecommendationBlock } from "@/components/shared/RecommendationBlock";
+import { ArticlesBlock } from "@/components/shared/ArticlesBlock";
+import { AccordionBlock } from "@/components/ui/AccordionBlock";
+import { GuaranteeBlock } from "@/components/shared/GuaranteeBlock";
 
 export default function LandingOne() {
   return (
@@ -85,6 +90,10 @@ export default function LandingOne() {
       </div>
 
       <InstructionsBlock />
+      <TermsBlock />
+      <RecommendationBlock />
+      <GuaranteeBlock />
+      <ArticlesBlock />
     </>
   );
 }

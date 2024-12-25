@@ -3,13 +3,10 @@
 .container {
   display: flex;
   flex-direction: column;
-  max-width: 1476px;
+  max-width: 1322px;
   width: 100%;
-  gap: 81px;
   margin: 106px auto 103px;
-  justify-content: space-between;
   align-content: space-between;
-  align-items: flex-start;
 
   @include desktop {
    max-width: 1312px;
@@ -27,7 +24,7 @@
 
     .section_header {
       font-family: var(--font-sfpro);
-      font-size: 64px;
+      font-size: 48px;
       font-weight: 500;
 
       @include desktop {
@@ -57,8 +54,9 @@
   .review_container {
     display: flex;
     flex-direction: row;
-    gap: 60px;
+    justify-content: space-between;
     position: relative;
+    align-items: center;
 
     @include mobile {
       flex-direction: column;
@@ -67,10 +65,13 @@
 
     .review_cards_container {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
-      width: 796px;
-      height: 501px;
+      grid-row-gap: 31px;
+      grid-column-gap: 30px;
+      width: 638px;
+      height: 435px;
+      margin-top: 60px;
 
       @include desktop {
         .review_card:nth-child(-n + 2) {
@@ -97,8 +98,8 @@
         display: flex;
         flex-direction: column;
         padding: 20px 20px 28px;
-        width: 252px;
-        height: 238px;
+        width: 304px;
+        height: 202px;
         background: rgba(245, 245, 245, 1);
         border-radius: 12px;
         gap: 20px;
@@ -158,8 +159,8 @@
         justify-content: center;
         align-items: center;
         padding: 25px;
-        width: 252px;
-        height: 238px;
+        width: 304px;
+        height: 202px;
         border-radius: 12px;
         border: 1px solid #0066FF;
 
@@ -185,8 +186,6 @@
           font-weight: 500;
           font-size: 16px;
           color: #0066FF;
-          text-decoration: underline;
-          text-underline-offset: 4px;
         }
       }
     }

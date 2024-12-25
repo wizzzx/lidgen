@@ -2,20 +2,25 @@
   display: flex;
   flex-direction: column;
   margin: auto;
+  max-width: 1322px;
+  width: 100%;
+  font-family: var(--font-sfpro);
 
   .header {
-
+    font-size: 48px;
+    font-weight: 500;
+    padding-bottom: 60px;
   }
 
   .cards_container {
     display: flex;
     align-items: center;
+    gap: 27px;
 
     .card {
       max-width: 423px;
       width: 100%;
       height: 297px;
-      font-family: var(--font-sfpro);
       border-radius: 24px;
       display: flex;
       flex-direction: column;

@@ -4,10 +4,11 @@
   display: flex;
   flex-direction: column;
   background: #FFFFFF;
-  padding-left: 154px;
-  border-radius: 24px;
-  margin-top: -50px;
   z-index: 1;
+  max-width: 1322px;
+  width: 100%;
+  margin: auto;
+
 
   @include mobile {
     max-width: 343px !important;
@@ -17,11 +18,11 @@
   }
 
   .section_header {
-    margin-top: 78px;
-    padding-bottom: 32px;
-    border-bottom: 1px solid #C8C8C8;
+    margin-top: 108px;
+    padding-bottom: 74px;
+    //border-bottom: 1px solid #C8C8C8;
     font-family: var(--font-cera);
-    font-size: 64px;
+    font-size: 48px;
     font-weight: 500;
 
     @include mobile {
@@ -50,7 +51,7 @@
       display: flex;
       flex-direction: column;
       gap: 18px;
-      padding-right: 166px;
+      padding-right: 150px;
 
       @include mobile {
         padding-right: 0;
@@ -69,7 +70,7 @@
       }
 
       .term_text {
-        color: #000000;
+        color: #3E5174;
         font-family: var(--font-cera);
         font-weight: 500;
         font-size: 48px;
@@ -79,7 +80,7 @@
         }
 
         .extra_margin {
-          padding-right: 80px;
+
         }
       }
     }
@@ -92,6 +93,7 @@
     font-size: 24px;
     padding-bottom: 53px;
     max-width: 1308px;
+    color: #88909B;
 
     @include mobile {
       font-size: 16px;
