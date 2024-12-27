@@ -12,7 +12,9 @@ export default function SignupStep2() {
     <main>
       <Container className={styles.container}>
         <ol className={cn(styles.list, "hidden-mobile")}>
-          <li className={styles.list_item}>Заполните короткую анкету</li>
+          <li className={cn(styles.list_item, styles.step1)}>
+            Заполните короткую анкету
+          </li>
           <li className={styles.list_item}>Примите предложение кредитора</li>
           <li className={styles.list_item}>Получите деньги</li>
         </ol>

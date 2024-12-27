@@ -71,7 +71,6 @@ export const ArticlesBlock: React.FC = () => {
           </div>
         ))}
       </div>
-      {/*<OtherOffersBlock className={styles.other_offers} />*/}
     </Container>
   );
 };

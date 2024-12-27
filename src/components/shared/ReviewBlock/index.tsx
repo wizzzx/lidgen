@@ -72,10 +72,10 @@ export const ReviewBlock: React.FC = () => {
           ))}
           <div className={styles.review_link_container}>
             <Image
-              src={"/assets/icons/ui/review_arrow.svg"}
+              src={"/assets/icons/ui/chat.svg"}
               alt={"arrow"}
-              width={20}
-              height={10}
+              width={32}
+              height={31}
               className={styles.arrow}
             />
             <Link href={"/reviews"} className={styles.link}>

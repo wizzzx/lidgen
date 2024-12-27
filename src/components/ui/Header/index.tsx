@@ -5,6 +5,7 @@ import Link from "next/link";
 import styles from "./index.module.scss";
 import { DropDownMenu } from "@/components/ui/DropDownMenu";
 import { usePathname } from "next/navigation";
+import cn from "classnames";
 
 interface Props {
   className?: string;
@@ -30,7 +31,12 @@ export const Header: React.FC<Props> = ({ className }) => {
   const isHeaderBlue = pathname ? pathname.startsWith("/signup/") : false;
 
   return (
-    <header className={isHeaderBlue ? styles.container_blue : styles.container}>
+    <header
+      className={cn(
+        isHeaderBlue ? styles.container_blue : styles.container,
+        className,
+      )}
+    >
       <div className={styles.header}>
         <Link href="/" className={styles.logo_link}>
           <div className={styles.logo}>

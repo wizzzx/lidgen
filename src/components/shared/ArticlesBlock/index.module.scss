@@ -63,7 +63,7 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
-        padding: 20px 31px;
+        padding: 20px 20px;
 
         .article_header {
           font-family: var(--font-cera);
@@ -96,6 +96,7 @@
         position: absolute;
         right: 29px;
         bottom: 29px;
+        margin-top: 10px;
       }
 
     }

@@ -3,11 +3,11 @@
 .container {
   display: flex;
   flex-direction: column;
-  background: #FFFFFF;
   z-index: 1;
   max-width: 1322px;
   width: 100%;
   margin: auto;
+  background-color: #EFEFEF;
 
 
   @include mobile {
@@ -19,7 +19,6 @@
 
   .section_header {
     margin-top: 108px;
-    padding-bottom: 74px;
     //border-bottom: 1px solid #C8C8C8;
     font-family: var(--font-cera);
     font-size: 48px;

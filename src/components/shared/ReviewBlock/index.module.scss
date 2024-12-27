@@ -154,15 +154,16 @@
       }
 
       .review_link_container {
-        position: relative;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
+        gap: 15px;
         padding: 25px;
         width: 304px;
         height: 202px;
         border-radius: 12px;
-        border: 1px solid #0066FF;
+        background-color: #E1E1E1;
 
         @include desktop {
           width: 300px;
@@ -175,17 +176,14 @@
         }
 
         .arrow {
-          position: absolute;
-          top: 25px;
-          right: 25px;
+
         }
 
         .link {
           text-align: center;
           font-family: var(--font-cera);
           font-weight: 500;
-          font-size: 16px;
-          color: #0066FF;
+          font-size: 19px;
         }
       }
     }
