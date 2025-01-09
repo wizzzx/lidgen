@@ -22,6 +22,7 @@ export default function LandingOne({
         <Header />
         {children}
       </ContainerLayout>
+      <Footer />
     </>
   );
 }

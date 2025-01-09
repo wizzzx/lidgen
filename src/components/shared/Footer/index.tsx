@@ -5,12 +5,15 @@ import styles from "./index.module.scss";
 import cn from "classnames";
 import { Container } from "@/components/shared/Container";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 
 const FooterNavigationData = [
   {
     title: "Продукты и условия",
     route: "/products",
+  },
+  {
+    title: "Техническая документация",
+    route: "/tech_documentation",
   },
   {
     title: "Оферта",
@@ -21,12 +24,12 @@ const FooterNavigationData = [
     route: "/about",
   },
   {
-    title: "Команды",
-    route: "/team",
+    title: "Подключение",
+    route: "/connection",
   },
   {
-    title: "Техническая документация",
-    route: "/technical_documentation",
+    title: "Команды",
+    route: "/teams",
   },
   {
     title: "FAQ",
@@ -36,80 +39,86 @@ const FooterNavigationData = [
     title: "Безопасность",
     route: "/security",
   },
-  {
-    title: "Подключение",
-    route: "/connection",
-  },
 ];
 
-interface Props {
-  className?: string;
-}
-
-export const Footer: React.FC<Props> = ({ className }) => {
-  const pathname = usePathname();
-  const isHeaderDark = pathname ? pathname.startsWith("/signup/") : false;
-
+export const Footer: React.FC = () => {
   return (
-    <Container
-      className={
-        isHeaderDark
-          ? cn(styles.container_dark, className)
-          : cn(styles.container, className)
-      }
-    >
-      <div className={cn("hidden-mobile", styles.wrapper)}>
-        <div className={styles.footer_subcontainer_left}>
-          <div className={styles.service}>
-            @ Сервис &laquo;Лидогенератор&raquo;, 2022
-          </div>
-          <div className={styles.telephone}>
+    <Container className={styles.container}>
+      <div className={styles.menu}>
+        <div className={styles.top_wrapper}>
+          <p>© Сервис «Лидогенератор», 2022</p>
+          <p>
             Остались вопросы? Звоните:{" "}
-            <span className={styles.telephone_number}>8 800 600 1776</span>
-          </div>
-          <Link
-            href={"/confidentiality_policy"}
-            className={styles.confidentiality_policy}
-          >
-            Политика конфиденциальности
-          </Link>
+            <span className={styles.bold}>8 800 600 1776</span>
+          </p>
+          <p className={styles.underlined_blue}>Политика конфиденциальности</p>
         </div>
-        <div className={styles.footer_subcontainer_right}>
-          <div className={styles.menu}>Меню</div>
-          <nav className={styles.menu_items}>
-            {FooterNavigationData.map((item, index) => (
-              <div key={index} className={styles.menu_item}>
-                <Link href={item.route}>{item.title}</Link>
-              </div>
-            ))}
+        <div>
+          <h4 className={styles.section_header}>Меню</h4>
+          <nav>
+            <ul className={styles.nav_links}>
+              {FooterNavigationData.map((item, i) => (
+                <li key={i} className={styles.nav_item}>
+                  <Link href={item.route}>{item.title}</Link>
+                </li>
+              ))}
+            </ul>
           </nav>
         </div>
       </div>
-      <div className={cn("visible-mobile", styles.wrapper)}>
-        <div className={styles.footer_subcontainer_right}>
-          <div className={styles.menu}>Меню</div>
-          <nav className={styles.menu_items}>
-            {FooterNavigationData.map((item, index) => (
-              <div key={index} className={styles.menu_item}>
-                <Link href={item.route}>{item.title}</Link>
-              </div>
-            ))}
-          </nav>
+      <div className={styles.info_block}>
+        <div className={styles.top}>
+          <p className={styles.naming}>
+            ООО ИА «МФО ПЛАТФОРМА» использует файлы cookie для повышения
+            удобства пользователей и обеспечения должного уровня
+            работоспособности сайта и сервисов. Cookie называются небольшие
+            файлы, содержащие информацию о настройках и предыдущих посещениях
+            веб-сайта. Если вы не хотите использовать файлы cookie, то можете
+            изменить настройки браузера. Условия использования{" "}
+            <Link href={"?"} className={styles.underlined}>
+              смотрите здесь
+            </Link>
+          </p>
+          <p>ИНН: 7723527345;</p>
+          <p>ОГРН: 1047796964522;</p>
+          <p>Адрес: 117638, г. Москва, улица Одесская, д. 2, этаж 19;</p>
+          <p>ОКВЭД: 63.12</p>
         </div>
-        <div className={styles.footer_subcontainer_left}>
-          <div className={styles.service}>
-            @ Сервис &laquo;Лидогенератор&raquo;, 2022
-          </div>
-          <div className={styles.telephone}>
-            Остались вопросы? Звоните:{" "}
-            <span className={styles.telephone_number}>8 800 600 1776</span>
-          </div>
-          <Link
-            href={"/confidentiality_policy"}
-            className={styles.confidentiality_policy}
-          >
-            Политика конфиденциальности
-          </Link>
+        <div className={styles.bot}>
+          <p>
+            Заемщик вправе направить обращение финансовому уполномоченному в
+            соответствии со статьями 15-19 Федерального закона от 4 июня 2018
+            года N 123-ФЗ «Об уполномоченном по правам потребителей финансовых
+            услуг» одним из следующих способов:
+          </p>
+          <ul className={styles.laws_list}>
+            <li className={styles.laws_list_item}>
+              в электронной форме через личный кабинет на сайте финансового
+              уполномоченного: finombudsman.ru.
+            </li>
+            <li className={styles.laws_list_item}>
+              в письменной форме на бумажном носителе в адрес финансового
+              уполномоченного: 119017, г. Москва, Старомонетный пер., дом 3,
+              контактный номер телефона 8 (800) 200-00-10»
+            </li>
+            <li className={styles.laws_list_item}>
+              {" "}
+              Ссылка на официальный сайт Банка России в
+              информационно-телекоммуникационной сети «Интернет»: https://cbr.ru
+            </li>
+            <li className={styles.laws_list_item}>
+              {" "}
+              Ссылка на страницу Банка России, содержащую государственный реестр
+              микрофинансовых организаций: https://cbr.ru/microfinance/registry
+            </li>
+            <li className={styles.laws_list_item}>
+              Регистрационный номер записи в государственном реестре
+              микрофинансовых организаций:
+            </li>
+            <li className={styles.laws_list_item}>
+              1703045008644 от 01.12.2017
+            </li>
+          </ul>
         </div>
       </div>
     </Container>

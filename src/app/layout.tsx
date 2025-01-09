@@ -101,6 +101,37 @@ const sfpro = localFont({
   ],
 });
 
+const graphik = localFont({
+  variable: "--font-graphik",
+  src: [
+    {
+      path: "./fonts/Graphik LCG/GraphikLCG-Thin.woff",
+      weight: "100",
+      style: "normal",
+    },
+    {
+      path: "./fonts/Graphik LCG/GraphikLCG-Regular.woff",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "./fonts/Graphik LCG/GraphikLCG-Medium.woff",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "./fonts/Graphik LCG/GraphikLCG-Semibold.woff",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "./fonts/Graphik LCG/GraphikLCG-Bold.woff",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+});
+
 export const viewport: Viewport = {
   width: "374px",
   initialScale: 1,
@@ -119,10 +150,11 @@ export default function RootLayout({
         sfpro.variable,
         nunito.variable,
         montserrat.variable,
+        graphik.variable,
       )}
     >
       <body
-        className={`${nunito.className} ${montserrat.className} ${cera.className} ${sfpro.className} app`}
+        className={`${nunito.className} ${montserrat.className} ${cera.className} ${sfpro.className} ${graphik.className} app`}
       >
         <Providers>{children}</Providers>
       </body>

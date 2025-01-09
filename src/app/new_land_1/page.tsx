@@ -11,6 +11,7 @@ import { TermsBlock } from "@/components/shared/TermsBlock";
 import { RecommendationBlock } from "@/components/shared/RecommendationBlock";
 import { ArticlesBlock } from "@/components/shared/ArticlesBlock";
 import { GuaranteeBlock } from "@/components/shared/GuaranteeBlock";
+import { CategoryLoanContainer } from "@/components/shared/CategoryLoanContainer";
 
 export default function LandingOne() {
   return (
@@ -95,6 +96,7 @@ export default function LandingOne() {
         <RecommendationBlock />
         <GuaranteeBlock />
         <ArticlesBlock />
+        <CategoryLoanContainer />
       </div>
     </>
   );
