@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import styles from "./index.module.scss";
-import { DropDownMenu } from "@/components/ui/DropDownMenu";
+import { DropDownMenu } from "../DropDownList";
 import { usePathname } from "next/navigation";
 import cn from "classnames";
 

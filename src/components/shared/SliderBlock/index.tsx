@@ -6,6 +6,7 @@ import cn from "classnames";
 import { RangeWithInput } from "../../ui/RangeWithInput";
 import { Button } from "@/components/ui/Button";
 import { useFormContext, useWatch } from "react-hook-form";
+import { DropDownList } from "@/components/ui/DropDownForm";
 
 interface Props {
   className?: string;
@@ -41,16 +42,17 @@ export const SliderBlock: React.FC<Props> = ({ className }) => {
           min={50000}
           startHeader={"Желаемая сумма"}
         />
-        <RangeWithInput
-          name={"loan_data.term"}
-          max={24}
-          min={1}
-          variant={"term"}
-          step={1}
-          rangeData={[1, 24]}
-          term={term}
-          startHeader={"Желаемый срок"}
-        />
+        {/*<RangeWithInput*/}
+        {/*  name={"loan_data.term"}*/}
+        {/*  max={24}*/}
+        {/*  min={1}*/}
+        {/*  variant={"term"}*/}
+        {/*  step={1}*/}
+        {/*  rangeData={[1, 24]}*/}
+        {/*  term={term}*/}
+        {/*  startHeader={"Желаемый срок"}*/}
+        {/*/>*/}
+        <DropDownList title={"Желаемый срок"} />
       </div>
       <div className={styles.button_container}>
         {/*<div className={styles.button_container_text}>*/}
