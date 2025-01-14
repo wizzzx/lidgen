@@ -2,24 +2,14 @@
 
 import React from "react";
 import { Container } from "@/components/shared/Container";
-import { TitleBlock } from "@/components/shared/TitleBlock";
-import { InstructionsBlock } from "@/components/shared/InstructionsBlock";
-import { TermsBlock } from "@/components/shared/TermsBlock";
-import { RecommendationBlock } from "@/components/shared/RecommendationBlock";
-import { GuaranteeBlock } from "@/components/shared/GuaranteeBlock";
-import { ArticlesBlock } from "@/components/shared/ArticlesBlock";
+import axios from "axios";
 
 export default function Home() {
+  const [data, setData] = React.useState([]);
+
   return (
     <main>
-      <Container>
-        <TitleBlock />
-        <InstructionsBlock />
-        <TermsBlock />
-        <RecommendationBlock />
-        <GuaranteeBlock />
-        <ArticlesBlock />
-      </Container>
+      <Container></Container>
     </main>
   );
 }

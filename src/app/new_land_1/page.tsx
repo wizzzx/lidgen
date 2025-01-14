@@ -12,7 +12,6 @@ import { RecommendationBlock } from "@/components/shared/RecommendationBlock";
 import { ArticlesBlock } from "@/components/shared/ArticlesBlock";
 import { GuaranteeBlock } from "@/components/shared/GuaranteeBlock";
 import { CategoryLoanContainer } from "@/components/shared/CategoryLoanContainer";
-import { DropDownList } from "@/components/ui/DropDownForm";
 
 export default function LandingOne() {
   return (
@@ -24,7 +23,6 @@ export default function LandingOne() {
         </p>
         <TitleBlockNewVariant />
         <LinkSlider />
-
         <div className={styles.text_container}>
           <div className={styles.header_icons_container}>
             <h2 className={styles.header}>
